@@ -1,0 +1,491 @@
+/**
+ * ============================================
+ * LSTYLE-SENIORS-PLUS
+ * Estils Principals
+ * ============================================
+ * 
+ * Disseny modern, professional i elegant
+ * Optimitzat per a seniors actius i educats
+ * NO infantil, NO paternalista
+ */
+
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+
+:root 
+{
+    /* Colors principals - Mode Fosc */
+   
+    --color-fons: #1a1a2e;
+    --color-fons-secundari: #16213e;
+    --color-fons-targeta: #0f3460;
+    --color-text: #eaeaea;
+    --color-text-secundari: #a0a0a0;
+    --color-primari: #e94560;
+    --color-primari-hover: #d63651;
+    --color-accent: #00d9ff;
+    --color-exit: #4caf50;
+    --color-advertencia: #ff9800;
+    --color-error: #f44336;
+    --color-info: #2196f3;
+    
+    /* Tipografia */
+   
+    --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-titols: 'Arial', sans-serif;
+    --mida-base: 16px;
+    --mida-petita: 14px;
+    --mida-gran: 18px;
+    --mida-titol: 28px;
+    --mida-subtitol: 22px;
+    
+    /* Espaiat */
+   
+    --espai-xs: 8px;
+    --espai-sm: 16px;
+    --espai-md: 24px;
+    --espai-lg: 32px;
+    --espai-xl: 48px;
+    
+    /* Vores i ombres */
+   
+    --radi-vora: 12px;
+    --radi-vora-petit: 6px;
+    --ombra-suau: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --ombra-mitjana: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --ombra-forta: 0 12px 24px rgba(0, 0, 0, 0.3);
+    
+    /* Transicions */
+   
+    --transicio-rapida: 0.2s ease;
+    --transicio-mitjana: 0.3s ease;
+    --transicio-lenta: 0.5s ease;
+    
+    /* Amplades màximes */
+   
+    --amplada-maxima-contingut: 1200px;
+    --amplada-maxima-formulari: 800px;
+}
+
+/* Mode Clar */
+
+[data-theme="clar"] 
+{
+    --color-fons: #f5f5f5;
+    --color-fons-secundari: #ffffff;
+    --color-fons-targeta: #ffffff;
+    --color-text: #333333;
+    --color-text-secundari: #666666;
+    --color-primari: #e94560;
+    --color-primari-hover: #d63651;
+    --color-accent: #0088cc;
+    --ombra-suau: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --ombra-mitjana: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --ombra-forta: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESET I BASE
+   ============================================ */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--mida-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--color-fons);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background-color var(--transicio-mitjana),
+                color var(--transicio-mitjana);
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+
+   h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titols);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: var(--espai-sm);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: var(--mida-titol);
+}
+
+h2 {
+    font-size: var(--mida-subtitol);
+}
+
+p {
+    margin-bottom: var(--espai-sm);
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transicio-rapida);
+}
+
+a:hover {
+    color: var(--color-primari);
+}
+
+/* ============================================
+   CONTENIDORS PRINCIPALS
+   ============================================ */
+
+   .contenidor {
+    max-width: var(--amplada-maxima-contingut);
+    margin: 0 auto;
+    padding: var(--espai-md);
+}
+
+.contenidor-fluid {
+    width: 100%;
+    padding: var(--espai-md);
+}
+
+/* ============================================
+   CAPÇALERA
+   ============================================ */
+
+.capcalera {
+    background-color: var(--color-fons-secundari);
+    padding: var(--espai-md) 0;
+    box-shadow: var(--ombra-mitjana);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transicio-mitjana);
+}
+
+.capcalera-contingut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--amplada-maxima-contingut);
+    margin: 0 auto;
+    padding: 0 var(--espai-md);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--espai-sm);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primari);
+}
+
+/* ============================================
+   NAVEGACIÓ
+   ============================================ */
+
+.nav {
+    display: flex;
+    gap: var(--espai-md);
+    align-items: center;
+}
+
+.nav-item {
+    padding: var(--espai-xs) var(--espai-sm);
+    border-radius: var(--radi-vora-petit);
+    transition: background-color var(--transicio-rapida);
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color: var(--color-fons-targeta);
+}
+
+/* ============================================
+   BOTONS
+   ============================================ */
+
+.btn {
+    padding: var(--espai-sm) var(--espai-md);
+    border: none;
+    border-radius: var(--radi-vora);
+    font-size: var(--mida-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espai-xs);
+    text-decoration: none;
+    box-shadow: var(--ombra-suau);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ombra-mitjana);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primari {
+    background-color: var(--color-primari);
+    color: white;
+}
+
+.btn-primari:hover {
+    background-color: var(--color-primari-hover);
+}
+
+.btn-secundari {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn-secundari:hover {
+    background-color: #0099dd;
+}
+
+.btn-exit {
+    background-color: var(--color-exit);
+    color: white;
+}
+
+.btn-contorn {
+    background-color: transparent;
+    border: 2px solid var(--color-primari);
+    color: var(--color-primari);
+}
+
+.btn-contorn:hover {
+    background-color: var(--color-primari);
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   TARGETES
+   ============================================ */
+
+.targeta {
+    background-color: var(--color-fons-targeta);
+    border-radius: var(--radi-vora);
+    padding: var(--espai-md);
+    box-shadow: var(--ombra-mitjana);
+    transition: transform var(--transicio-mitjana),
+                box-shadow var(--transicio-mitjana);
+}
+
+.targeta:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ombra-forta);
+}
+
+.targeta-capcalera {
+    border-bottom: 2px solid var(--color-primari);
+    padding-bottom: var(--espai-sm);
+    margin-bottom: var(--espai-md);
+}
+
+.targeta-titol {
+    font-size: var(--mida-subtitol);
+    color: var(--color-primari);
+}
+
+.targeta-cos {
+    padding: var(--espai-sm) 0;
+}
+
+/* ============================================
+   FORMULARIS
+   ============================================ */
+
+.grup-formulari {
+    margin-bottom: var(--espai-md);
+}
+
+.etiqueta-formulari {
+    display: block;
+    margin-bottom: var(--espai-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.input-formulari,
+.select-formulari,
+.textarea-formulari {
+    width: 100%;
+    padding: var(--espai-sm);
+    border: 2px solid var(--color-fons-secundari);
+    border-radius: var(--radi-vora-petit);
+    background-color: var(--color-fons-secundari);
+    color: var(--color-text);
+    font-size: var(--mida-base);
+    font-family: var(--font-principal);
+    transition: border-color var(--transicio-rapida);
+}
+
+.input-formulari:focus,
+.select-formulari:focus,
+.textarea-formulari:focus {
+    outline: none;
+    border-color: var(--color-primari);
+}
+
+.input-formulari.error {
+    border-color: var(--color-error);
+}
+
+.error-formulari {
+    color: var(--color-error);
+    font-size: var(--mida-petita);
+    margin-top: var(--espai-xs);
+    display: none;
+}
+
+.error-formulari.actiu {
+    display: block;
+}
+
+.ajuda-formulari {
+    font-size: var(--mida-petita);
+    color: var(--color-text-secundari);
+    margin-top: var(--espai-xs);
+}
+
+/* Checkbox personalitzat */
+
+.contenidor-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--espai-sm);
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* ============================================
+   UTILITATS
+   ============================================ */
+
+.text-centre {
+    text-align: center;
+}
+
+.text-dreta {
+    text-align: right;
+}
+
+.mt-1 { margin-top: var(--espai-xs); }
+.mt-2 { margin-top: var(--espai-sm); }
+.mt-3 { margin-top: var(--espai-md); }
+.mt-4 { margin-top: var(--espai-lg); }
+
+.mb-1 { margin-bottom: var(--espai-xs); }
+.mb-2 { margin-bottom: var(--espai-sm); }
+.mb-3 { margin-bottom: var(--espai-md); }
+.mb-4 { margin-bottom: var(--espai-lg); }
+
+.p-1 { padding: var(--espai-xs); }
+.p-2 { padding: var(--espai-sm); }
+.p-3 { padding: var(--espai-md); }
+.p-4 { padding: var(--espai-lg); }
+
+.ocult {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+/* ============================================
+   ANIMACIONS
+   ============================================ */
+
+@keyframes apareix {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.apareix {
+    animation: apareix var(--transicio-lenta);
+}
+
+@keyframes gira {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: gira 1s linear infinite;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+   
+@media (max-width: 768px) {
+    :root {
+        --mida-titol: 24px;
+        --mida-subtitol: 20px;
+        --espai-md: 16px;
+        --espai-lg: 24px;
+    }
+    
+    .capcalera-contingut {
+        flex-direction: column;
+        gap: var(--espai-sm);
+    }
+    
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+}

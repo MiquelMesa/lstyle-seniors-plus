@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LSTYLE-SENIORS-PLUS - Aplicació web per a estil de vida saludable dirigida a Seniors Universitaris Plus">
+    <meta name="author" content="LSTYLE-SENIORS-PLUS">
+    <meta name="keywords" content="seniors, salut, nutrició, dieta, exercici, benestar">
+    
+    <title>LSTYLE-SENIORS-PLUS | Estil de Vida Saludable</title>
+    
+    <!-- Icona -->
+    <link rel="icon" type="image/png" href="img/general/envejecer-saludablemente.png">
+    
+    <!-- Estils -->
+    <link rel="stylesheet" href="css/estils.css">
+    <link rel="stylesheet" href="css/pantalles.css">
+    
+    <!-- Supabase Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body data-theme="fosc">
+
+    <!-- ============================================
+         BOTÓ PANTALLA COMPLETA
+         ============================================ -->
+    <button id="btn-pantalla-completa" class="btn-pantalla-completa" title="Pantalla completa (F11)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+        </svg>
+    </button>
+    
+    <!-- ============================================
+         PANTALLA DE CÀRREGA
+         ============================================ -->
+
+    <div id="pantalla-carrega" class="pantalla-carrega">
+        <div class="contenidor-carrega">
+            <img src="img/general/envejecer-saludablemente.png" alt="LSTYLE-SENIORS-PLUS" class="logo-carrega">
+            <div class="spinner-container">
+                <div class="spinner"></div>
+            </div>
+            <p class="text-carrega">Carregant les dades...</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PANTALLA DISCLAIMER (Primera pantalla)
+         ============================================ -->
+
+    <div id="pantalla-disclaimer" class="pantalla ocult">
+        <div class="contenidor">
+            <div class="targeta targeta-disclaimer">
+                <div class="targeta-capcalera text-centre">
+                    <img src="img/general/envejecer-saludablemente.png" alt="LSTYLE-SENIORS-PLUS" class="logo-principal">
+                    <h1 class="targeta-titol">LSTYLE-SENIORS-PLUS</h1>
+                    <p class="subtitol">Estil de Vida Saludable per a Seniors Universitaris Plus</p>
+                </div>
+                
+                <div class="targeta-cos">
+                    <div class="seccio-disclaimer">
+                        <h2>📋 Informació Important</h2>
+                        <div class="contingut-disclaimer">
+                            <h3>Caràcter Informatiu</h3>
+                            <p>
+                                Aquesta aplicació té un <strong>caràcter merament informatiu</strong> i educatiu. 
+                                Les dades, càlculs, suggeriments i consells que proporciona estan basats en fonts 
+                                oficials i estudis científics, però <strong>NO substitueixen</strong> el consell 
+                                professional del vostre metge o especialista sanitari.
+                            </p>
+                            
+                            <h3>🔒 Privacitat de les Dades</h3>
+                            <p>
+                                Totes les vostres dades personals i de salut són <strong>completament privades</strong> 
+                                i <strong>NO es comparteixen amb ningú</strong>. Les dades es guarden de forma segura 
+                                i xifrada al vostre navegador local. Només vosaltres teniu accés a aquesta informació.
+                            </p>
+                            
+                            <h3>📚 Fonts Oficials Utilitzades</h3>
+                            <ul class="llista-fonts">
+                                <li>
+                                    <strong>BEDCA</strong> - Base de Dades Espanyola de Composició d'Aliments
+                                    <br><a href="https://www.bedca.net/bdpub/" target="_blank" rel="noopener">www.bedca.net/bdpub/</a>
+                                </li>
+                                <li>
+                                    <strong>Generalitat de Catalunya</strong> - Salut Pública
+                                    <br><a href="https://salutpublica.gencat.cat/" target="_blank" rel="noopener">salutpublica.gencat.cat</a>
+                                </li>
+                                <li>
+                                    <strong>Ministeri d'Agricultura</strong> - Alimentació
+                                    <br><a href="https://www.alimentacion.es/" target="_blank" rel="noopener">www.alimentacion.es</a>
+                                </li>
+                                <li>
+                                    <strong>Societat Espanyola del Son</strong>
+                                    <br><a href="https://ses.org.es/" target="_blank" rel="noopener">ses.org.es</a>
+                                </li>
+                                <li>
+                                    <strong>Societat Espanyola de Geriatria i Gerontologia (SEGG)</strong>
+                                </li>
+                            </ul>
+                            
+                            <h3>⚕️ Consulta Mèdica</h3>
+                            <p>
+                                Davant de <strong>qualsevol dubte sobre la vostra salut</strong>, condició mèdica, 
+                                medicació o tractament, consulteu sempre amb el vostre metge de capçalera o 
+                                especialista. Aquesta aplicació no diagnostica ni tracta malalties.
+                            </p>
+                            
+                            <h3>🎯 Objectiu de l'Aplicació</h3>
+                            <p>
+                                LSTYLE-SENIORS-PLUS està dissenyada específicament per a <strong>Seniors 
+                                Universitaris Plus</strong>: persones actives, educades i modernes que volen 
+                                mantenir un estil de vida saludable amb informació fiable i de qualitat.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkbox d'acceptació -->
+                    <div class="seccio-acceptacio">
+                        <label class="contenidor-checkbox">
+                            <input type="checkbox" id="checkbox-acceptacio" class="input-checkbox">
+                            <span class="text-checkbox">
+                                He llegit i entenc que aquesta aplicació és informativa, que les meves dades 
+                                són privades i que davant qualsevol dubte consultaré amb el meu metge.
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <!-- Botó continuar (desactivat fins acceptar) -->
+                    <div class="seccio-botons text-centre mt-4">
+                        <button id="btn-continuar-disclaimer" class="btn btn-primari btn-gran" disabled>
+                            Continuar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PANTALLA D'ENTRADA DE DADES
+         ============================================ -->
+
+    <div id="pantalla-entrada-dades" class="pantalla ocult">
+        <div class="contenidor">
+            <h1 class="text-centre">Entrada de Dades</h1>
+            <p class="text-centre">Aquesta pantalla es crearà al següent pas...</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PANTALLA DE RESULTATS
+         ============================================ -->
+         
+    <div id="pantalla-resultats" class="pantalla ocult">
+        <div class="contenidor">
+            <h1 class="text-centre">Resultats</h1>
+            <p class="text-centre">Aquesta pantalla es crearà més endavant...</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    
+    <!-- Configuració Supabase -->
+    <script src="config/supabase-config.js"></script>
+    
+    <!-- Utilitats de Seguretat -->
+    <script src="utils/seguretat.js"></script>
+    
+    <!-- Script Principal -->
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
