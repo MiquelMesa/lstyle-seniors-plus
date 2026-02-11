@@ -69,136 +69,107 @@
 }
 
 /* ============================================
-   PANTALLA DISCLAIMER
+   PANTALLA DISCLAIMER - COMPACTA
    ============================================ */
 .targeta-disclaimer {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-.logo-principal {
-    width: 100px;
+.targeta-disclaimer .targeta-capcalera {
+    text-align: center;
+    margin-bottom: var(--espai-md);
+    padding-bottom: var(--espai-sm);
+}
+
+.targeta-disclaimer .logo-principal {
+    width: 80px;
     height: auto;
-    margin-bottom: var(--espai-md);
-}
-
-.subtitol {
-    color: var(--color-text-secundari);
-    font-size: var(--mida-gran);
-    margin-top: var(--espai-xs);
-}
-
-.seccio-disclaimer {
-    margin-bottom: var(--espai-lg);
-}
-
-.seccio-disclaimer h2 {
-    color: var(--color-primari);
-    font-size: var(--mida-subtitol);
-    margin-bottom: var(--espai-md);
-    border-bottom: 2px solid var(--color-primari);
-    padding-bottom: var(--espai-xs);
-}
-
-.seccio-disclaimer h3 {
-    color: var(--color-accent);
-    font-size: var(--mida-gran);
-    margin-top: var(--espai-md);
     margin-bottom: var(--espai-sm);
 }
 
-.contingut-disclaimer p {
-    margin-bottom: var(--espai-md);
-    line-height: 1.8;
+.targeta-disclaimer .targeta-titol {
+    margin-bottom: var(--espai-xs);
 }
 
+.targeta-disclaimer .subtitol {
+    font-size: var(--mida-base);
+    color: var(--color-text-secundari);
+    margin-top: var(--espai-xs);
+}
+
+/* Contingut en 2 columnes */
+.contingut-disclaimer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espai-md);
+    margin-bottom: var(--espai-md);
+}
+
+.contingut-disclaimer h3 {
+    font-size: var(--mida-base);
+    color: var(--color-accent);
+    margin-top: var(--espai-sm);
+    margin-bottom: var(--espai-xs);
+}
+
+.contingut-disclaimer p {
+    font-size: var(--mida-petita);
+    margin-bottom: var(--espai-sm);
+    line-height: 1.5;
+}
+
+/* Llista de fonts compacta */
 .llista-fonts {
     list-style: none;
     padding: 0;
 }
 
 .llista-fonts li {
-    margin-bottom: var(--espai-md);
-    padding: var(--espai-sm);
-    background-color: var(--color-fons-secundari);
+    margin-bottom: var(--espai-xs);
+    padding: var(--espai-xs);
+    background-color: rgba(26, 58, 82, 0.3);
     border-radius: var(--radi-vora-petit);
-    border-left: 4px solid var(--color-accent);
+    border-left: 3px solid var(--color-accent);
+    font-size: var(--mida-petita);
 }
 
 .llista-fonts li strong {
     color: var(--color-accent);
     display: block;
-    margin-bottom: var(--espai-xs);
+    font-size: 13px;
 }
 
 .llista-fonts a {
-    color: var(--color-primari);
+    font-size: 11px;
     word-break: break-all;
+    color: var(--color-primari);
 }
 
-.llista-fonts a:hover {
-    text-decoration: underline;
-}
-
-/* ============================================
-   SECCIÓ D'ACCEPTACIÓ
-   ============================================ */
-.seccio-acceptacio {
-    background-color: var(--color-fons-secundari);
+/* Acceptació i botons en una sola línia */
+.seccio-acceptacio-botons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espai-md);
+    background-color: rgba(19, 47, 76, 0.5);
     padding: var(--espai-md);
     border-radius: var(--radi-vora);
-    border: 2px solid var(--color-primari);
-    margin: var(--espai-lg) 0;
+    border: 2px solid rgba(0, 188, 212, 0.3);
 }
 
-.text-checkbox {
-    font-size: var(--mida-base);
-    line-height: 1.6;
-    color: var(--color-text);
+.seccio-acceptacio-botons .contenidor-checkbox {
+    flex: 1;
 }
 
-/* ============================================
-   BOTONS
-   ============================================ */
-.btn-gran {
-    padding: var(--espai-md) var(--espai-xl);
-    font-size: var(--mida-gran);
-}
-
-.seccio-botons {
-    margin-top: var(--espai-lg);
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 768px) {
-    .targeta-disclaimer {
-        margin: var(--espai-sm);
-    }
-    
-    .logo-principal {
-        width: 80px;
-    }
-    
-    .seccio-disclaimer h2 {
-        font-size: 20px;
-    }
-    
-    .seccio-disclaimer h3 {
-        font-size: var(--mida-base);
-    }
-    
-    .btn-gran {
-        width: 100%;
-        padding: var(--espai-sm) var(--espai-md);
-    }
+.seccio-acceptacio-botons .text-checkbox {
+    font-size: var(--mida-petita);
+    line-height: 1.4;
 }
 
 /* ============================================
    BOTÓ PANTALLA COMPLETA
    ============================================ */
-   
 .btn-pantalla-completa {
     position: fixed;
     top: var(--espai-md);
@@ -207,7 +178,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--color-primari);
+    background: var(--gradient-primari);
     border: none;
     cursor: pointer;
     display: flex;
@@ -219,7 +190,7 @@
 }
 
 .btn-pantalla-completa:hover {
-    background-color: var(--color-primari-hover);
+    background: var(--gradient-secundari);
     transform: scale(1.1);
     box-shadow: var(--ombra-forta);
 }
@@ -228,12 +199,10 @@
     transform: scale(0.95);
 }
 
-/* Ocultar el botó quan ja estem en pantalla completa */
 .btn-pantalla-completa.ocult {
     display: none;
 }
 
-/* Animació del botó */
 .btn-pantalla-completa svg {
     transition: transform var(--transicio-rapida);
 }
@@ -242,7 +211,9 @@
     transform: rotate(90deg);
 }
 
-/* Responsive: botó més petit en mòbil */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 768px) {
     .btn-pantalla-completa {
         width: 45px;
@@ -254,5 +225,18 @@
     .btn-pantalla-completa svg {
         width: 20px;
         height: 20px;
+    }
+    
+    .contingut-disclaimer {
+        grid-template-columns: 1fr;
+    }
+    
+    .seccio-acceptacio-botons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .seccio-acceptacio-botons .contenidor-checkbox {
+        margin-bottom: var(--espai-sm);
     }
 }

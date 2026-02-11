@@ -1,0 +1,426 @@
+/**
+ * ============================================
+ * LSTYLE-SENIORS-PLUS
+ * Formulari Compacte - Layout Escriptori
+ * Distribució 3+3 (3 seccions esquerra, 3 dreta)
+ * ============================================
+ */
+
+/* ============================================
+   TARGETA FORMULARI - AMPLA
+   ============================================ */
+.targeta-formulari {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--espai-md);
+}
+
+.formulari-dades {
+    width: 100%;
+}
+
+/* ============================================
+   CAPÇALERA COMPACTA
+   ============================================ */
+.targeta-capcalera {
+    margin-bottom: var(--espai-md);
+    padding-bottom: var(--espai-sm);
+    border-bottom: 3px solid;
+    border-image: var(--gradient-primari) 1;
+}
+
+.targeta-capcalera .targeta-titol {
+    font-size: 32px;
+    background: var(--gradient-primari);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--espai-xs);
+}
+
+.targeta-capcalera .subtitol {
+    font-size: var(--mida-base);
+    color: var(--color-text-secundari);
+}
+
+/* ============================================
+   LAYOUT PRINCIPAL - 2 COLUMNES (3+3)
+   ============================================ */
+.targeta-cos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espai-md);
+}
+
+/* Seccions en grid */
+.seccio-formulari {
+    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
+    border-radius: var(--radi-vora);
+    padding: var(--espai-sm) var(--espai-md);
+    border: 1px solid rgba(0, 188, 212, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   DISPOSICIÓ 3+3 (MOLT IMPORTANT)
+   ============================================ */
+/* Columna ESQUERRA */
+.seccio-formulari:nth-child(1) { 
+    grid-column: 1; 
+    grid-row: 1; 
+} /* Dades personals */
+
+.seccio-formulari:nth-child(3) { 
+    grid-column: 1; 
+    grid-row: 2; 
+} /* Pressió arterial */
+
+.seccio-formulari:nth-child(5) { 
+    grid-column: 1; 
+    grid-row: 3; 
+} /* Activitat física */
+
+/* Columna DRETA */
+.seccio-formulari:nth-child(2) { 
+    grid-column: 2; 
+    grid-row: 1; 
+} /* Dades físiques */
+
+.seccio-formulari:nth-child(4) { 
+    grid-column: 2; 
+    grid-row: 2; 
+} /* Condicions de salut */
+
+.seccio-formulari:nth-child(6) { 
+    grid-column: 2; 
+    grid-row: 3; 
+} /* Hàbits */
+
+/* ============================================
+   TÍTOLS DE SECCIÓ - COMPACTES
+   ============================================ */
+.titol-seccio {
+    display: flex;
+    align-items: center;
+    gap: var(--espai-xs);
+    font-size: var(--mida-gran);
+    margin-bottom: var(--espai-sm);
+    color: var(--color-primari);
+}
+
+.numero-seccio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-primari);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: var(--mida-base);
+}
+
+.descripcio-seccio {
+    font-size: var(--mida-petita);
+    color: var(--color-text-secundari);
+    margin-bottom: var(--espai-sm);
+}
+
+/* ============================================
+   GRUPS DE FORMULARI - COMPACTES
+   ============================================ */
+.grup-formulari {
+    margin-bottom: var(--espai-sm);
+}
+
+.grup-formulari:last-child {
+    margin-bottom: 0;
+}
+
+/* Grups en fila dins de seccions */
+.grup-formulari-fila {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espai-sm);
+}
+
+/* ============================================
+   ETIQUETES - COMPACTES
+   ============================================ */
+.etiqueta-formulari {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: var(--mida-petita);
+}
+
+.obligatori {
+    color: var(--color-error);
+}
+
+.info-tooltip {
+    cursor: help;
+    font-size: 14px;
+    color: var(--color-accent);
+    margin-left: 4px;
+}
+
+/* ============================================
+   INPUTS - COMPACTES
+   ============================================ */
+.input-formulari,
+.select-formulari {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 188, 212, 0.3);
+    border-radius: 6px;
+    background-color: rgba(19, 47, 76, 0.5);
+    color: var(--color-text);
+    font-size: var(--mida-petita);
+    transition: all var(--transicio-rapida);
+}
+
+.input-formulari:focus,
+.select-formulari:focus {
+    outline: none;
+    border-color: var(--color-primari);
+    background-color: rgba(19, 47, 76, 0.8);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+}
+
+/* ============================================
+   RANGS - ULTRA COMPACTES
+   ============================================ */
+.grup-rang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-petit {
+    flex: 1;
+    max-width: 80px;
+}
+
+.separador-rang {
+    color: var(--color-text-secundari);
+    font-size: 11px;
+}
+
+/* ============================================
+   AJUDA - COMPACTA
+   ============================================ */
+.ajuda-formulari {
+    font-size: 11px;
+    color: var(--color-text-secundari);
+    margin-top: 2px;
+    display: block;
+}
+
+/* ============================================
+   CHECKBOXES - GRID COMPACTE
+   ============================================ */
+.grid-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: rgba(26, 58, 82, 0.5);
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all var(--transicio-rapida);
+    cursor: pointer;
+}
+
+.checkbox-item:hover {
+    border-color: var(--color-accent);
+    background-color: rgba(26, 58, 82, 0.8);
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--color-primari);
+}
+
+.checkbox-label {
+    cursor: pointer;
+    font-size: var(--mida-petita);
+    user-select: none;
+}
+
+/* ============================================
+   RADIO BUTTONS - COMPACTES
+   ============================================ */
+.grup-radio {
+    display: grid;
+    gap: 6px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+    background-color: rgba(26, 58, 82, 0.5);
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+}
+
+.radio-label:hover {
+    border-color: var(--color-accent);
+    background-color: rgba(26, 58, 82, 0.8);
+}
+
+.radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--color-primari);
+}
+
+.radio-label:has(input[type="radio"]:checked) {
+    border-color: var(--color-primari);
+    background: linear-gradient(145deg, rgba(0, 188, 212, 0.15), rgba(38, 198, 218, 0.1));
+}
+
+.radio-label span {
+    flex: 1;
+}
+
+.radio-label strong {
+    display: block;
+    font-size: var(--mida-petita);
+    color: var(--color-text);
+    margin-bottom: 2px;
+}
+
+.radio-descripcio {
+    font-size: 11px;
+    color: var(--color-text-secundari);
+    line-height: 1.3;
+}
+
+/* ============================================
+   ERRORS - COMPACTES
+   ============================================ */
+.error-formulari {
+    color: var(--color-error);
+    font-size: 11px;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background-color: rgba(255, 82, 82, 0.1);
+    border-radius: 4px;
+    border-left: 2px solid var(--color-error);
+    display: none;
+}
+
+.error-formulari.actiu {
+    display: block;
+}
+
+.input-formulari.error,
+.select-formulari.error {
+    border-color: var(--color-error);
+}
+
+.input-formulari.exit,
+.select-formulari.exit {
+    border-color: var(--color-exit);
+}
+
+/* ============================================
+   BOTONS - COMPACTES I MODERNS
+   ============================================ */
+.seccio-botons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espai-md);
+    margin-top: var(--espai-md);
+    padding-top: var(--espai-md);
+    border-top: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.btn {
+    padding: 10px 24px;
+    font-size: var(--mida-base);
+}
+
+.btn-primari {
+    background: var(--gradient-primari);
+    border: none;
+}
+
+.btn-primari:hover {
+    background: var(--gradient-secundari);
+    transform: translateY(-1px);
+}
+
+.btn-secundari {
+    background-color: transparent;
+    border: 1px solid var(--color-primari);
+    color: var(--color-primari);
+}
+
+.btn-secundari:hover {
+    background-color: rgba(0, 188, 212, 0.1);
+}
+
+/* ============================================
+   VALIDACIÓ VISUAL
+   ============================================ */
+.input-formulari:invalid:not(:placeholder-shown) {
+    border-color: var(--color-advertencia);
+}
+
+.input-formulari:valid:not(:placeholder-shown) {
+    border-color: var(--color-exit);
+}
+
+/* ============================================
+   ANIMACIONS
+   ============================================ */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* ============================================
+   RESPONSIVE - NOMÉS PER PANTALLES PETITES
+   ============================================ */
+@media (max-width: 1200px) {
+    .targeta-cos {
+        grid-template-columns: 1fr;
+    }
+    
+    .seccio-formulari:nth-child(n) {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+    
+    .grid-checkboxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .grup-formulari-fila {
+        grid-template-columns: 1fr;
+    }
+}

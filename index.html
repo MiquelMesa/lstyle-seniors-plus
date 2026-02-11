@@ -10,20 +10,26 @@
     <title>LSTYLE-SENIORS-PLUS | Estil de Vida Saludable</title>
     
     <!-- Icona -->
+
     <link rel="icon" type="image/png" href="img/general/envejecer-saludablemente.png">
     
     <!-- Estils -->
+
     <link rel="stylesheet" href="css/estils.css">
     <link rel="stylesheet" href="css/pantalles.css">
+    <link rel="stylesheet" href="css/formulari.css">
     
     <!-- Supabase Client Library -->
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </head>
 <body data-theme="fosc">
 
     <!-- ============================================
          BOTÓ PANTALLA COMPLETA
          ============================================ -->
+
     <button id="btn-pantalla-completa" class="btn-pantalla-completa" title="Pantalla completa (F11)">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
@@ -40,6 +46,7 @@
             <div class="spinner-container">
                 <div class="spinner"></div>
             </div>
+            <p class="text-carrega">Estil de Vida Saludable</p>
             <p class="text-carrega">Carregant les dades...</p>
         </div>
     </div>
@@ -48,107 +55,442 @@
          PANTALLA DISCLAIMER (Primera pantalla)
          ============================================ -->
 
-    <div id="pantalla-disclaimer" class="pantalla ocult">
-        <div class="contenidor">
-            <div class="targeta targeta-disclaimer">
-                <div class="targeta-capcalera text-centre">
-                    <img src="img/general/envejecer-saludablemente.png" alt="LSTYLE-SENIORS-PLUS" class="logo-principal">
-                    <h1 class="targeta-titol">LSTYLE-SENIORS-PLUS</h1>
-                    <p class="subtitol">Estil de Vida Saludable per a Seniors Universitaris Plus</p>
+    <!-- ============================================
+     PANTALLA DISCLAIMER (Compacta - sense scroll)
+     ============================================ -->
+<div id="pantalla-disclaimer" class="pantalla ocult">
+    <div class="contenidor">
+        <div class="targeta targeta-disclaimer">
+            <div class="targeta-capcalera">
+                <img src="img/general/envejecer-saludablemente.png" alt="LSTYLE-SENIORS-PLUS" class="logo-principal">
+                <h1 class="targeta-titol">LSTYLE-SENIORS-PLUS</h1>
+                <p class="subtitol">Estil de Vida Saludable per a Seniors Universitaris Plus</p>
+            </div>
+            
+            <div class="targeta-cos">
+                <div class="contingut-disclaimer">
+                    <!-- Columna 1 -->
+                    <div>
+                        <h3>📋 Caràcter Informatiu</h3>
+                        <p>Aquesta aplicació té un caràcter merament informatiu i educatiu. Les dades, càlculs i consells NO substitueixen el consell professional del vostre metge.</p>
+                        
+                        <h3>🔒 Privacitat de Dades</h3>
+                        <p>Totes les vostres dades personals i de salut són completament privades i NO es comparteixen amb ningú. Es guarden de forma segura i xifrada al vostre navegador local.</p>
+                        
+                        <h3>⚕️ Consulta Mèdica</h3>
+                        <p>Davant de qualsevol dubte sobre la vostra salut, condició mèdica, medicació o tractament, consulteu sempre amb el vostre metge de capçalera o especialista. Aquesta aplicació no diagnostica ni tracta malalties.</p>
+                    </div>
+                    
+                    <!-- Columna 2 -->
+                    <div>
+                        <h3>📚 Fonts Oficials Utilitzades</h3>
+                        <ul class="llista-fonts">
+                            <li>
+                                <strong>BEDCA</strong>
+                                Base de Dades Espanyola de Composició d'Aliments
+                            </li>
+                            <li>
+                                <strong>Generalitat de Catalunya</strong>
+                                Departament de Salut Pública
+                            </li>
+                            <li>
+                                <strong>Ministeri d'Agricultura</strong>
+                                Informació sobre alimentació saludable
+                            </li>
+                            <li>
+                                <strong>Societat Espanyola del Son (SES)</strong>
+                                Recomanacions sobre descans i son
+                            </li>
+                            <li>
+                                <strong>SEGG</strong>
+                                Societat Espanyola de Geriatria i Gerontologia
+                            </li>
+                        </ul>
+                        
+                        <h3>🎯 Objectiu</h3>
+                        <p>Dissenyada per a Seniors Universitaris Plus: persones actives, educades i modernes que volen mantenir un estil de vida saludable amb informació fiable.</p>
+                    </div>
                 </div>
                 
-                <div class="targeta-cos">
-                    <div class="seccio-disclaimer">
-                        <h2>📋 Informació Important</h2>
-                        <div class="contingut-disclaimer">
-                            <h3>Caràcter Informatiu</h3>
-                            <p>
-                                Aquesta aplicació té un <strong>caràcter merament informatiu</strong> i educatiu. 
-                                Les dades, càlculs, suggeriments i consells que proporciona estan basats en fonts 
-                                oficials i estudis científics, però <strong>NO substitueixen</strong> el consell 
-                                professional del vostre metge o especialista sanitari.
-                            </p>
-                            
-                            <h3>🔒 Privacitat de les Dades</h3>
-                            <p>
-                                Totes les vostres dades personals i de salut són <strong>completament privades</strong> 
-                                i <strong>NO es comparteixen amb ningú</strong>. Les dades es guarden de forma segura 
-                                i xifrada al vostre navegador local. Només vosaltres teniu accés a aquesta informació.
-                            </p>
-                            
-                            <h3>📚 Fonts Oficials Utilitzades</h3>
-                            <ul class="llista-fonts">
-                                <li>
-                                    <strong>BEDCA</strong> - Base de Dades Espanyola de Composició d'Aliments
-                                    <br><a href="https://www.bedca.net/bdpub/" target="_blank" rel="noopener">www.bedca.net/bdpub/</a>
-                                </li>
-                                <li>
-                                    <strong>Generalitat de Catalunya</strong> - Salut Pública
-                                    <br><a href="https://salutpublica.gencat.cat/" target="_blank" rel="noopener">salutpublica.gencat.cat</a>
-                                </li>
-                                <li>
-                                    <strong>Ministeri d'Agricultura</strong> - Alimentació
-                                    <br><a href="https://www.alimentacion.es/" target="_blank" rel="noopener">www.alimentacion.es</a>
-                                </li>
-                                <li>
-                                    <strong>Societat Espanyola del Son</strong>
-                                    <br><a href="https://ses.org.es/" target="_blank" rel="noopener">ses.org.es</a>
-                                </li>
-                                <li>
-                                    <strong>Societat Espanyola de Geriatria i Gerontologia (SEGG)</strong>
-                                </li>
-                            </ul>
-                            
-                            <h3>⚕️ Consulta Mèdica</h3>
-                            <p>
-                                Davant de <strong>qualsevol dubte sobre la vostra salut</strong>, condició mèdica, 
-                                medicació o tractament, consulteu sempre amb el vostre metge de capçalera o 
-                                especialista. Aquesta aplicació no diagnostica ni tracta malalties.
-                            </p>
-                            
-                            <h3>🎯 Objectiu de l'Aplicació</h3>
-                            <p>
-                                LSTYLE-SENIORS-PLUS està dissenyada específicament per a <strong>Seniors 
-                                Universitaris Plus</strong>: persones actives, educades i modernes que volen 
-                                mantenir un estil de vida saludable amb informació fiable i de qualitat.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Checkbox d'acceptació -->
-                    <div class="seccio-acceptacio">
-                        <label class="contenidor-checkbox">
-                            <input type="checkbox" id="checkbox-acceptacio" class="input-checkbox">
-                            <span class="text-checkbox">
-                                He llegit i entenc que aquesta aplicació és informativa, que les meves dades 
-                                són privades i que davant qualsevol dubte consultaré amb el meu metge.
-                            </span>
-                        </label>
-                    </div>
-                    
-                    <!-- Botó continuar (desactivat fins acceptar) -->
-                    <div class="seccio-botons text-centre mt-4">
-                        <button id="btn-continuar-disclaimer" class="btn btn-primari btn-gran" disabled>
-                            Continuar
-                        </button>
-                    </div>
+                <!-- Acceptació i Botó en la mateixa línia -->
+                <div class="seccio-acceptacio-botons">
+                    <label class="contenidor-checkbox">
+                        <input type="checkbox" id="checkbox-acceptacio" class="input-checkbox">
+                        <span class="text-checkbox">
+                            He llegit i entenc que aquesta aplicació és informativa, que les meves dades són privades i que davant qualsevol dubte consultaré amb el meu metge.
+                        </span>
+                    </label>
+                    <button id="btn-continuar-disclaimer" class="btn btn-primari btn-gran" disabled>
+                        Continuar →
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- ============================================
-         PANTALLA D'ENTRADA DE DADES
-         ============================================ -->
+<!-- ============================================
+     PANTALLA D'ENTRADA DE DADES
+     ============================================ -->
 
-    <div id="pantalla-entrada-dades" class="pantalla ocult">
-        <div class="contenidor">
-            <h1 class="text-centre">Entrada de Dades</h1>
-            <p class="text-centre">Aquesta pantalla es crearà al següent pas...</p>
+<div id="pantalla-entrada-dades" class="pantalla ocult">
+    <div class="contenidor">
+        <div class="targeta targeta-formulari">
+            
+            <!-- Capçalera -->
+     
+            <div class="targeta-capcalera text-centre">
+                <h1 class="targeta-titol">Les Teves Dades</h1>
+                <p class="subtitol">Omple les dades següents per obtenir recomanacions personalitzades</p>
+            </div>
+            
+            <div class="targeta-cos">
+                <form id="formulari-dades" class="formulari-dades">
+                    
+                    <!-- ==================== SECCIÓ 1: DADES PERSONALS ==================== -->
+     
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">1</span>
+                            Dades Personals
+                        </h2>
+                        
+                        <!-- Nom -->
+     
+                        <div class="grup-formulari">
+                            <label for="nom" class="etiqueta-formulari">
+                                Nom <span class="obligatori">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="nom" 
+                                name="nom" 
+                                class="input-formulari" 
+                                placeholder="El teu nom"
+                                required
+                                maxlength="100"
+                            >
+                            <small class="ajuda-formulari">Com t'agradaria que et diguéssim?</small>
+                            <div class="error-formulari" id="error-nom"></div>
+                        </div>
+                        
+                        <!-- Sexe i Edat (en línia) -->
+
+                        <div class="grup-formulari-fila">
+                            
+                            <!-- Sexe -->
+                            
+                            <div class="grup-formulari">
+                                <label for="sexe" class="etiqueta-formulari">
+                                    Sexe <span class="obligatori">*</span>
+                                </label>
+                                <select id="sexe" name="sexe" class="select-formulari" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="M">Varó</option>
+                                    <option value="F">Dona</option>
+                                </select>
+                                <div class="error-formulari" id="error-sexe"></div>
+                            </div>
+                            
+                            <!-- Edat -->
+                            
+                            <div class="grup-formulari">
+                                <label for="edat" class="etiqueta-formulari">
+                                    Edat <span class="obligatori">*</span>
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="edat" 
+                                    name="edat" 
+                                    class="input-formulari" 
+                                    placeholder="Anys"
+                                    min="60"
+                                    max="120"
+                                    required
+                                >
+                                <small class="ajuda-formulari">Entre 60 i 120 anys</small>
+                                <div class="error-formulari" id="error-edat"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== SECCIÓ 2: DADES FÍSIQUES ==================== -->
+                    
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">2</span>
+                            Dades Físiques
+                        </h2>
+                        
+                        <!-- Alçada -->
+                        
+                        <div class="grup-formulari">
+                            <label class="etiqueta-formulari">
+                                Alçada <span class="obligatori">*</span>
+                                <span class="info-tooltip" title="Si tens un rang d'alçada, posa els dos valors. Sinó, només el primer.">ℹ️</span>
+                            </label>
+                            <div class="grup-rang">
+                                <input 
+                                    type="number" 
+                                    id="alcada-min" 
+                                    name="alcada-min" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="cm"
+                                    min="100"
+                                    max="250"
+                                    step="0.1"
+                                    required
+                                >
+                                <span class="separador-rang">fins a</span>
+                                <input 
+                                    type="number" 
+                                    id="alcada-max" 
+                                    name="alcada-max" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="cm (opcional)"
+                                    min="100"
+                                    max="250"
+                                    step="0.1"
+                                >
+                            </div>
+                            <small class="ajuda-formulari">Exemple: Entre 175 i 177 cm, o només 176 cm</small>
+                            <div class="error-formulari" id="error-alcada"></div>
+                        </div>
+                        
+                        <!-- Pes -->
+                        
+                        <div class="grup-formulari">
+                            <label class="etiqueta-formulari">
+                                Pes <span class="obligatori">*</span>
+                                <span class="info-tooltip" title="Per a major fiabilitat, pesa't en dejú i sense roba">ℹ️</span>
+                            </label>
+                            <div class="grup-rang">
+                                <input 
+                                    type="number" 
+                                    id="pes-min" 
+                                    name="pes-min" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="kg"
+                                    min="30"
+                                    max="300"
+                                    step="0.01"
+                                    required
+                                >
+                                <span class="separador-rang">fins a</span>
+                                <input 
+                                    type="number" 
+                                    id="pes-max" 
+                                    name="pes-max" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="kg (opcional)"
+                                    min="30"
+                                    max="300"
+                                    step="0.01"
+                                >
+                            </div>
+                            <small class="ajuda-formulari">Exemple: Entre 78,5 i 79,2 kg, o només 78,8 kg</small>
+                            <div class="error-formulari" id="error-pes"></div>
+                        </div>
+                        
+                        <!-- Perímetre cintura -->
+                        
+                        <div class="grup-formulari">
+                            <label class="etiqueta-formulari">
+                                Perímetre de cintura
+                                <span class="info-tooltip" title="Mesura a l'altura del melic">ℹ️</span>
+                            </label>
+                            <div class="grup-rang">
+                                <input 
+                                    type="number" 
+                                    id="cintura-min" 
+                                    name="cintura-min" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="cm"
+                                    min="40"
+                                    max="200"
+                                    step="0.1"
+                                >
+                                <span class="separador-rang">fins a</span>
+                                <input 
+                                    type="number" 
+                                    id="cintura-max" 
+                                    name="cintura-max" 
+                                    class="input-formulari input-petit" 
+                                    placeholder="cm (opcional)"
+                                    min="40"
+                                    max="200"
+                                    step="0.1"
+                                >
+                            </div>
+                            <small class="ajuda-formulari">Important per avaluar el risc cardiovascular (opcional)</small>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== SECCIÓ 3: PRESSIÓ ARTERIAL ==================== -->
+                    
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">3</span>
+                            Pressió Arterial
+                        </h2>
+                        
+                        <div class="grup-formulari-fila">
+                    
+                            <!-- Pressió màxima -->
+                    
+                            <div class="grup-formulari">
+                                <label for="pressio-max" class="etiqueta-formulari">
+                                    Pressió màxima (sistòlica)
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="pressio-max" 
+                                    name="pressio-max" 
+                                    class="input-formulari" 
+                                    placeholder="mmHg"
+                                    min="60"
+                                    max="250"
+                                >
+                                <small class="ajuda-formulari">Exemple: 120 mmHg</small>
+                            </div>
+                            
+                            <!-- Pressió mínima -->
+                    
+                            <div class="grup-formulari">
+                                <label for="pressio-min" class="etiqueta-formulari">
+                                    Pressió mínima (diastòlica)
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="pressio-min" 
+                                    name="pressio-min" 
+                                    class="input-formulari" 
+                                    placeholder="mmHg"
+                                    min="40"
+                                    max="150"
+                                >
+                                <small class="ajuda-formulari">Exemple: 80 mmHg</small>
+                            </div>
+                            
+                            <!-- Freqüència cardíaca -->
+                    
+                            <div class="grup-formulari">
+                                <label for="frequencia" class="etiqueta-formulari">
+                                    Freqüència cardíaca
+                                </label>
+                                <input 
+                                    type="number" 
+                                    id="frequencia" 
+                                    name="frequencia" 
+                                    class="input-formulari" 
+                                    placeholder="ppm"
+                                    min="40"
+                                    max="200"
+                                >
+                                <small class="ajuda-formulari">Pulsacions per minut</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== SECCIÓ 4: TRANSTORNS HABITUALS ==================== -->
+                    
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">4</span>
+                            Condicions de Salut
+                        </h2>
+                        <p class="descripcio-seccio">Marca les condicions que et són aplicables (opcional)</p>
+                        
+                        <div id="contenidor-condicions" class="grid-checkboxes">
+                    
+                            <!-- Les condicions es carregaran dinàmicament des de Supabase -->
+                        
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== SECCIÓ 5: ACTIVITAT FÍSICA ==================== -->
+                    
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">5</span>
+                            Activitat Física
+                        </h2>
+                        
+                        <div class="grup-formulari">
+                            <label class="etiqueta-formulari">
+                                Nivell d'activitat diària/setmanal <span class="obligatori">*</span>
+                            </label>
+                            <div id="contenidor-activitat" class="grup-radio">
+                    
+                                <!-- Les opcions es carregaran dinàmicament des de Supabase -->
+                    
+                            </div>
+                            <div class="error-formulari" id="error-activitat"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== SECCIÓ 6: HÀBITS ==================== -->
+                    
+                    <div class="seccio-formulari">
+                        <h2 class="titol-seccio">
+                            <span class="numero-seccio">6</span>
+                            Hàbits de Vida
+                        </h2>
+                        
+                        <div class="grup-formulari-fila">
+                    
+                            <!-- Fumador -->
+                    
+                            <div class="grup-formulari">
+                                <label class="etiqueta-formulari">Fumador/a?</label>
+                                <div class="grup-radio">
+                                    <label class="radio-label">
+                                        <input type="radio" name="fumador" value="si" required>
+                                        <span>Sí</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="fumador" value="no" checked>
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Vegetarià -->
+                    
+                            <div class="grup-formulari">
+                                <label class="etiqueta-formulari">Vegetarià/ana?</label>
+                                <div class="grup-radio">
+                                    <label class="radio-label">
+                                        <input type="radio" name="vegetaria" value="si" required>
+                                        <span>Sí</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="vegetaria" value="no" checked>
+                                        <span>No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ==================== BOTONS D'ACCIÓ ==================== -->
+                    
+                    <div class="seccio-botons">
+                        <button type="button" class="btn btn-secundari" id="btn-netejar">
+                            Netejar formulari
+                        </button>
+                        <button type="submit" class="btn btn-primari btn-gran">
+                            Calcular i veure resultats
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
         </div>
     </div>
-
-    <!-- ============================================
+</div>
+    
+<!-- ============================================
          PANTALLA DE RESULTATS
          ============================================ -->
          
@@ -171,6 +513,9 @@
     
     <!-- Script Principal -->
     <script src="js/app.js"></script>
+    
+    <!-- Script Formulari -->
+    <script src="js/formulari.js"></script>
     
 </body>
 </html>

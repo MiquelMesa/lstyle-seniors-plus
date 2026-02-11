@@ -6,32 +6,41 @@
  * 
  * Disseny modern, professional i elegant
  * Optimitzat per a seniors actius i educats
- * NO infantil, NO paternalista
+ * Paleta: Blaus/Verds/Cians/Blancs/Grisos
  */
 
 /* ============================================
    VARIABLES CSS
    ============================================ */
-
-:root 
-{
-    /* Colors principals - Mode Fosc */
-   
-    --color-fons: #1a1a2e;
-    --color-fons-secundari: #16213e;
-    --color-fons-targeta: #0f3460;
-    --color-text: #eaeaea;
-    --color-text-secundari: #a0a0a0;
-    --color-primari: #e94560;
-    --color-primari-hover: #d63651;
-    --color-accent: #00d9ff;
-    --color-exit: #4caf50;
-    --color-advertencia: #ff9800;
-    --color-error: #f44336;
-    --color-info: #2196f3;
+:root {
+    /* Colors principals - Mode Fosc Modern */
+    --color-fons: #0a1929;
+    --color-fons-secundari: #132f4c;
+    --color-fons-targeta: #1a3a52;
+    --color-text: #e3f2fd;
+    --color-text-secundari: #b0bec5;
+    --color-primari: #00bcd4;
+    --color-primari-hover: #00acc1;
+    --color-accent: #26c6da;
+    --color-exit: #00e676;
+    --color-advertencia: #ffc107;
+    --color-error: #ff5252;
+    --color-info: #448aff;
+    
+    /* Blancs i Grisos */
+    --color-blanc: #ffffff;
+    --color-blanc-suau: #f8f9fa;
+    --color-gris-clar: #e0e0e0;
+    --color-gris: #9e9e9e;
+    --color-gris-fosc: #616161;
+    --color-gris-molt-fosc: #424242;
+    
+    /* Gradients moderns */
+    --gradient-primari: linear-gradient(135deg, #00bcd4 0%, #26c6da 100%);
+    --gradient-secundari: linear-gradient(135deg, #1976d2 0%, #00bcd4 100%);
+    --gradient-accent: linear-gradient(135deg, #00e676 0%, #00bcd4 100%);
     
     /* Tipografia */
-   
     --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-titols: 'Arial', sans-serif;
     --mida-base: 16px;
@@ -41,7 +50,6 @@
     --mida-subtitol: 22px;
     
     /* Espaiat */
-   
     --espai-xs: 8px;
     --espai-sm: 16px;
     --espai-md: 24px;
@@ -49,7 +57,6 @@
     --espai-xl: 48px;
     
     /* Vores i ombres */
-   
     --radi-vora: 12px;
     --radi-vora-petit: 6px;
     --ombra-suau: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -57,39 +64,38 @@
     --ombra-forta: 0 12px 24px rgba(0, 0, 0, 0.3);
     
     /* Transicions */
-   
     --transicio-rapida: 0.2s ease;
     --transicio-mitjana: 0.3s ease;
     --transicio-lenta: 0.5s ease;
     
     /* Amplades màximes */
-   
     --amplada-maxima-contingut: 1200px;
     --amplada-maxima-formulari: 800px;
 }
 
 /* Mode Clar */
-
-[data-theme="clar"] 
-{
-    --color-fons: #f5f5f5;
+[data-theme="clar"] {
+    --color-fons: #f0f4f8;
     --color-fons-secundari: #ffffff;
     --color-fons-targeta: #ffffff;
-    --color-text: #333333;
-    --color-text-secundari: #666666;
-    --color-primari: #e94560;
-    --color-primari-hover: #d63651;
-    --color-accent: #0088cc;
-    --ombra-suau: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --ombra-mitjana: 0 8px 16px rgba(0, 0, 0, 0.1);
-    --ombra-forta: 0 12px 24px rgba(0, 0, 0, 0.15);
+    --color-text: #0a1929;
+    --color-text-secundari: #455a64;
+    --color-primari: #0288d1;
+    --color-primari-hover: #0277bd;
+    --color-accent: #00acc1;
+    --ombra-suau: 0 2px 8px rgba(0, 188, 212, 0.08);
+    --ombra-mitjana: 0 4px 16px rgba(0, 188, 212, 0.12);
+    --ombra-forta: 0 8px 24px rgba(0, 188, 212, 0.16);
+    
+    --gradient-primari: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%);
+    --gradient-secundari: linear-gradient(135deg, #1976d2 0%, #0288d1 100%);
+    --gradient-accent: linear-gradient(135deg, #00e676 0%, #00bcd4 100%);
 }
 
 /* ============================================
    RESET I BASE
    ============================================ */
-
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -113,8 +119,7 @@ body {
 /* ============================================
    TIPOGRAFIA
    ============================================ */
-
-   h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-titols);
     font-weight: 600;
     line-height: 1.3;
@@ -148,8 +153,7 @@ a:hover {
 /* ============================================
    CONTENIDORS PRINCIPALS
    ============================================ */
-
-   .contenidor {
+.contenidor {
     max-width: var(--amplada-maxima-contingut);
     margin: 0 auto;
     padding: var(--espai-md);
@@ -163,15 +167,15 @@ a:hover {
 /* ============================================
    CAPÇALERA
    ============================================ */
-
 .capcalera {
-    background-color: var(--color-fons-secundari);
+    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
     padding: var(--espai-md) 0;
     box-shadow: var(--ombra-mitjana);
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: background-color var(--transicio-mitjana);
+    border-bottom: 2px solid rgba(0, 188, 212, 0.3);
 }
 
 .capcalera-contingut {
@@ -197,13 +201,15 @@ a:hover {
 .logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: var(--color-primari);
+    background: var(--gradient-primari);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ============================================
    NAVEGACIÓ
    ============================================ */
-
 .nav {
     display: flex;
     gap: var(--espai-md);
@@ -224,7 +230,6 @@ a:hover {
 /* ============================================
    BOTONS
    ============================================ */
-
 .btn {
     padding: var(--espai-sm) var(--espai-md);
     border: none;
@@ -250,26 +255,29 @@ a:hover {
 }
 
 .btn-primari {
-    background-color: var(--color-primari);
+    background: var(--gradient-primari);
     color: white;
+    border: none;
 }
 
 .btn-primari:hover {
-    background-color: var(--color-primari-hover);
+    background: var(--gradient-secundari);
 }
 
 .btn-secundari {
-    background-color: var(--color-accent);
-    color: white;
+    background-color: transparent;
+    border: 2px solid var(--color-primari);
+    color: var(--color-primari);
 }
 
 .btn-secundari:hover {
-    background-color: #0099dd;
+    background-color: rgba(0, 188, 212, 0.1);
 }
 
 .btn-exit {
-    background-color: var(--color-exit);
+    background: var(--gradient-accent);
     color: white;
+    border: none;
 }
 
 .btn-contorn {
@@ -279,7 +287,7 @@ a:hover {
 }
 
 .btn-contorn:hover {
-    background-color: var(--color-primari);
+    background: var(--gradient-primari);
     color: white;
 }
 
@@ -289,17 +297,22 @@ a:hover {
     transform: none;
 }
 
+.btn-gran {
+    padding: var(--espai-md) var(--espai-xl);
+    font-size: var(--mida-gran);
+}
+
 /* ============================================
    TARGETES
    ============================================ */
-
 .targeta {
-    background-color: var(--color-fons-targeta);
+    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
     border-radius: var(--radi-vora);
     padding: var(--espai-md);
     box-shadow: var(--ombra-mitjana);
     transition: transform var(--transicio-mitjana),
                 box-shadow var(--transicio-mitjana);
+    border: 1px solid rgba(0, 188, 212, 0.2);
 }
 
 .targeta:hover {
@@ -315,7 +328,10 @@ a:hover {
 
 .targeta-titol {
     font-size: var(--mida-subtitol);
-    color: var(--color-primari);
+    background: var(--gradient-primari);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .targeta-cos {
@@ -325,7 +341,6 @@ a:hover {
 /* ============================================
    FORMULARIS
    ============================================ */
-
 .grup-formulari {
     margin-bottom: var(--espai-md);
 }
@@ -342,9 +357,9 @@ a:hover {
 .textarea-formulari {
     width: 100%;
     padding: var(--espai-sm);
-    border: 2px solid var(--color-fons-secundari);
+    border: 2px solid rgba(0, 188, 212, 0.3);
     border-radius: var(--radi-vora-petit);
-    background-color: var(--color-fons-secundari);
+    background-color: rgba(19, 47, 76, 0.5);
     color: var(--color-text);
     font-size: var(--mida-base);
     font-family: var(--font-principal);
@@ -356,6 +371,7 @@ a:hover {
 .textarea-formulari:focus {
     outline: none;
     border-color: var(--color-primari);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
 }
 
 .input-formulari.error {
@@ -380,7 +396,6 @@ a:hover {
 }
 
 /* Checkbox personalitzat */
-
 .contenidor-checkbox {
     display: flex;
     align-items: center;
@@ -393,12 +408,12 @@ a:hover {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    accent-color: var(--color-primari);
 }
 
 /* ============================================
    UTILITATS
    ============================================ */
-
 .text-centre {
     text-align: center;
 }
@@ -433,7 +448,6 @@ a:hover {
 /* ============================================
    ANIMACIONS
    ============================================ */
-
 @keyframes apareix {
     from {
         opacity: 0;
@@ -462,10 +476,19 @@ a:hover {
     animation: gira 1s linear infinite;
 }
 
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
-   
 @media (max-width: 768px) {
     :root {
         --mida-titol: 24px;

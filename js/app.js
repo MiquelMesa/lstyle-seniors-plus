@@ -177,11 +177,18 @@ function inicialitzarDisclaimer() {
         btnContinuar.disabled = !e.target.checked;
     });
     
+    
     // Event botó continuar
     btnContinuar.addEventListener('click', () => {
-        ocultarPantalla('pantalla-disclaimer');
-        mostrarPantalla('pantalla-entrada-dades');
-    });
+    ocultarPantalla('pantalla-disclaimer');
+    mostrarPantalla('pantalla-entrada-dades');
+    
+    // Inicialitzar formulari quan es mostra
+    if (window.formulari && window.formulari.inicialitzarFormulari) {
+        window.formulari.inicialitzarFormulari();
+    }
+});
+
 }
 
 /**
