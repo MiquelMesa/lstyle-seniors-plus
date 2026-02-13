@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFE STYLE SENIORS PLUS - Disclaimer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Exo 2', 'Segoe UI', sans-serif;
+            background: #0a1929;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .disclaimer-wrapper {
+            width: 100%;
+            max-width: 920px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* BLOC SUPERIOR */
+        .bloc-superior {
+            background: linear-gradient(145deg, #132f4c 0%, #1a3a52 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 200, 232, 0.2);
+            padding: 28px 36px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 36px;
+            align-items: center;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 200, 232, 0.05);
+        }
+
+        .bloc-imatge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bloc-imatge img {
+            width: 260px;
+            height: auto;
+            border-radius: 14px;
+            filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
+        }
+
+        .bloc-contingut {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 16px;
+        }
+
+        .titol-principal {
+            font-size: 38px;
+            font-weight: 900;
+            color: #e8f4fd;
+            text-align: right;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .titol-linia {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 200, 232, 0.6), transparent);
+        }
+
+        .subtitol {
+            font-size: 17px;
+            font-weight: 600;
+            color: #f0c040;
+            text-align: right;
+            letter-spacing: 0.02em;
+        }
+
+        .area-acceptacio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 14px;
+            width: 100%;
+        }
+
+        .checkbox-fila {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            justify-content: flex-end;
+            max-width: 440px;
+        }
+
+        .checkbox-fila input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            cursor: pointer;
+            accent-color: #00c8e8;
+            margin-top: 3px;
+        }
+
+        .checkbox-text {
+            font-size: 14px;
+            color: #b0c8d8;
+            line-height: 1.6;
+            text-align: right;
+            cursor: pointer;
+        }
+
+        .btn-continuar {
+            background: linear-gradient(135deg, #e03030 0%, #cc1010 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 48px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 0.04em;
+            transition: all 0.2s ease;
+            min-width: 220px;
+            box-shadow: 0 4px 16px rgba(220, 30, 30, 0.3);
+        }
+
+        .btn-continuar:hover:not(:disabled) {
+            background: linear-gradient(135deg, #ff3333 0%, #dd1111 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 30, 30, 0.4);
+        }
+
+        .btn-continuar:disabled {
+            background: linear-gradient(135deg, #3a4f60 0%, #2a3f50 100%);
+            color: #607080;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* BLOC MIG: 4 TARGETES */
+        .bloc-targetes {
+            background: linear-gradient(145deg, #0f2438 0%, #132f4c 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 200, 232, 0.15);
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .targeta-info {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px 20px;
+            transition: all 0.2s ease;
+        }
+
+        .targeta-info:hover {
+            background: rgba(0, 200, 232, 0.06);
+            border-color: rgba(0, 200, 232, 0.2);
+        }
+
+        .targeta-info h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e8f4fd;
+            margin-bottom: 6px;
+            letter-spacing: 0.02em;
+        }
+
+        .targeta-info p {
+            font-size: 13px;
+            color: #7a9ab0;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* BLOC INFERIOR: FONTS */
+        .bloc-fonts {
+            background: linear-gradient(145deg, #061a10 0%, #0a2518 100%);
+            border-radius: 14px;
+            border: 1px solid rgba(0, 200, 100, 0.35);
+            padding: 16px 24px;
+            box-shadow: 0 0 20px rgba(0, 200, 100, 0.08);
+        }
+
+        .fonts-titol {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00e676;
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+        }
+
+        .fonts-llista {
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            font-size: 12.5px;
+            color: #60b890;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="disclaimer-wrapper">
+
+        <!-- BLOC SUPERIOR -->
+        <div class="bloc-superior">
+            <div class="bloc-imatge">
+                <img src="img/general/envejecer-saludablemente.png" alt="Life Style Seniors Plus"
+                    onerror="this.style.opacity='0.15';">
+            </div>
+            <div class="bloc-contingut">
+                <div class="titol-principal">LIFE STYLE SENIORS PLUS</div>
+                <div class="titol-linia"></div>
+                <div class="subtitol">Estil de Vida Saludable per a Seniors Universitaris Plus</div>
+                <div class="area-acceptacio">
+                    <div class="checkbox-fila">
+                        <input type="checkbox" id="checkbox-acceptacio"
+                            onchange="document.getElementById('btn-continuar').disabled = !this.checked">
+                        <label class="checkbox-text" for="checkbox-acceptacio">
+                            Aquesta aplicació és informativa. Les meves dades
+                            són privades. Davant qualsevol dubte consultaré amb el meu metge.
+                        </label>
+                    </div>
+                    <button id="btn-continuar" class="btn-continuar" disabled onclick="alert('Continuant...')">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOC MIG: 4 Targetes -->
+        <div class="bloc-targetes">
+            <div class="targeta-info">
+                <h3>📋 Caràcter Informatiu</h3>
+                <p>Aquesta aplicació té un caràcter merament informatiu i educatiu. Les dades, càlculs i consells NO
+                    substitueixen el consell professional del vostre metge.</p>
+            </div>
+            <div class="targeta-info">
+                <h3>🔒 Privacitat de Dades</h3>
+                <p>Totes les vostres dades personals i de salut són completament privades i NO es comparteixen amb
+                    ningú. Es guarden de forma segura i xifrada al vostre navegador local.</p>
+            </div>
+            <div class="targeta-info">
+                <h3>⚕️ Consulta Mèdica</h3>
+                <p>Davant de qualsevol dubte sobre la vostra salut, condició mèdica, medicació o tractament, consulteu
+                    sempre amb el vostre metge de capçalera o especialista. Aquesta aplicació no diagnostica ni tracta
+                    malalties.</p>
+            </div>
+            <div class="targeta-info">
+                <h3>🎯 Objectiu</h3>
+                <p>Dissenyada per a Seniors Universitaris Plus: persones actives, educades i modernes que volen mantenir
+                    un estil de vida saludable amb informació fiable.</p>
+            </div>
+        </div>
+
+        <!-- BLOC INFERIOR: Fonts -->
+        <div class="bloc-fonts">
+            <div class="fonts-titol">🗂️ Fonts Oficials Utilitzades</div>
+            <div class="fonts-llista">
+                BEDCA - Base de Dades Espanyola de Composició d'Aliments - www.bedca.net/bdpub/<br>
+                Generalitat de Catalunya - Salut Pública - salutpublica.gencat.cat<br>
+                Ministeri d'Agricultura - Alimentació - www.alimentacion.es<br>
+                Societat Espanyola del Son - ses.org.es<br>
+                Societat Espanyola de Geriatria i Gerontologia (SEGG)
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,160 +1,164 @@
 /**
  * ============================================
  * LSTYLE-SENIORS-PLUS
- * Estils Principals
+ * Estils Principals - Estil Modern
  * ============================================
- * 
- * Disseny modern, professional i elegant
- * Optimitzat per a seniors actius i educats
- * Paleta: Blaus/Verds/Cians/Blancs/Grisos
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap');
 
 /* ============================================
    VARIABLES CSS
    ============================================ */
+   
 :root {
-    /* Colors principals - Mode Fosc Modern */
-    --color-fons: #0a1929;
-    --color-fons-secundari: #132f4c;
-    --color-fons-targeta: #1a3a52;
-    --color-text: #e3f2fd;
-    --color-text-secundari: #b0bec5;
-    --color-primari: #00bcd4;
-    --color-primari-hover: #00acc1;
-    --color-accent: #26c6da;
-    --color-exit: #00e676;
-    --color-advertencia: #ffc107;
-    --color-error: #ff5252;
-    --color-info: #448aff;
-    
+    /* Colors principals - Fosc tecnològic */
+    --color-fons: #0d1b2a;
+    --color-fons-secundari: #1a2d3f;
+    --color-fons-targeta: #162534;
+    --color-fons-targeta-hover: #1e3448;
+
+    /* Textos */
+    --color-text: #e8f4fd;
+    --color-text-secundari: #8baabf;
+    --color-text-subtitol: #f0c040;
+    --color-text-mono: #a8d8f0;
+
+    /* Accents principals */
+    --color-primari: #00c8e8;
+    --color-primari-hover: #00b4d0;
+    --color-accent-verd: #00e676;
+    --color-accent-verd-hover: #00c860;
+    --color-accent-groc: #f0c040;
+    --color-accent-vermell: #ff4444;
+    --color-accent-vermell-hover: #cc0000;
+
     /* Blancs i Grisos */
     --color-blanc: #ffffff;
-    --color-blanc-suau: #f8f9fa;
-    --color-gris-clar: #e0e0e0;
-    --color-gris: #9e9e9e;
-    --color-gris-fosc: #616161;
-    --color-gris-molt-fosc: #424242;
-    
-    /* Gradients moderns */
-    --gradient-primari: linear-gradient(135deg, #00bcd4 0%, #26c6da 100%);
-    --gradient-secundari: linear-gradient(135deg, #1976d2 0%, #00bcd4 100%);
-    --gradient-accent: linear-gradient(135deg, #00e676 0%, #00bcd4 100%);
-    
+    --color-blanc-suau: #f0f4f8;
+    --color-gris-clar: #cdd8e3;
+    --color-gris: #7a90a0;
+    --color-gris-fosc: #3a4f60;
+    --color-gris-molt-fosc: #1e2f3e;
+
+    /* Vores */
+    --color-vora: rgba(0, 200, 232, 0.25);
+    --color-vora-verd: rgba(0, 230, 118, 0.5);
+    --color-vora-actiu: rgba(0, 200, 232, 0.8);
+
+    /* Gradients */
+    --gradient-primari: linear-gradient(135deg, #00c8e8 0%, #0088cc 100%);
+    --gradient-verd: linear-gradient(135deg, #00e676 0%, #00c8e8 100%);
+    --gradient-fosc: linear-gradient(145deg, #1a2d3f 0%, #162534 100%);
+    --gradient-vermell: linear-gradient(135deg, #ff4444 0%, #cc2200 100%);
+    --gradient-fons: radial-gradient(ellipse at 20% 50%, rgba(0, 200, 232, 0.05) 0%, transparent 60%),
+                     radial-gradient(ellipse at 80% 20%, rgba(0, 136, 204, 0.05) 0%, transparent 60%),
+                     #0d1b2a;
+
+    /* Ombres */
+    --ombra-suau: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --ombra-mitjana: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --ombra-forta: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --ombra-cyan: 0 0 20px rgba(0, 200, 232, 0.15);
+    --ombra-verd: 0 0 20px rgba(0, 230, 118, 0.15);
+
     /* Tipografia */
-    --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-titols: 'Arial', sans-serif;
-    --mida-base: 16px;
-    --mida-petita: 14px;
-    --mida-gran: 18px;
+    --font-principal: 'Exo 2', 'Segoe UI', sans-serif;
+    --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+    --mida-xs: 11px;
+    --mida-petita: 13px;
+    --mida-base: 15px;
+    --mida-gran: 17px;
+    --mida-subtitol: 20px;
     --mida-titol: 28px;
-    --mida-subtitol: 22px;
-    
+    --mida-titol-gran: 36px;
+
     /* Espaiat */
-    --espai-xs: 8px;
-    --espai-sm: 16px;
-    --espai-md: 24px;
-    --espai-lg: 32px;
-    --espai-xl: 48px;
-    
-    /* Vores i ombres */
-    --radi-vora: 12px;
-    --radi-vora-petit: 6px;
-    --ombra-suau: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --ombra-mitjana: 0 8px 16px rgba(0, 0, 0, 0.2);
-    --ombra-forta: 0 12px 24px rgba(0, 0, 0, 0.3);
-    
+    --espai-xs: 6px;
+    --espai-sm: 12px;
+    --espai-md: 20px;
+    --espai-lg: 28px;
+    --espai-xl: 40px;
+
+    /* Vores arrodonides */
+    --radi-vora: 14px;
+    --radi-vora-petit: 8px;
+    --radi-vora-gran: 20px;
+
     /* Transicions */
-    --transicio-rapida: 0.2s ease;
+    --transicio-rapida: 0.15s ease;
     --transicio-mitjana: 0.3s ease;
     --transicio-lenta: 0.5s ease;
-    
-    /* Amplades màximes */
-    --amplada-maxima-contingut: 1200px;
-    --amplada-maxima-formulari: 800px;
-}
-
-/* Mode Clar */
-[data-theme="clar"] {
-    --color-fons: #f0f4f8;
-    --color-fons-secundari: #ffffff;
-    --color-fons-targeta: #ffffff;
-    --color-text: #0a1929;
-    --color-text-secundari: #455a64;
-    --color-primari: #0288d1;
-    --color-primari-hover: #0277bd;
-    --color-accent: #00acc1;
-    --ombra-suau: 0 2px 8px rgba(0, 188, 212, 0.08);
-    --ombra-mitjana: 0 4px 16px rgba(0, 188, 212, 0.12);
-    --ombra-forta: 0 8px 24px rgba(0, 188, 212, 0.16);
-    
-    --gradient-primari: linear-gradient(135deg, #0288d1 0%, #00bcd4 100%);
-    --gradient-secundari: linear-gradient(135deg, #1976d2 0%, #0288d1 100%);
-    --gradient-accent: linear-gradient(135deg, #00e676 0%, #00bcd4 100%);
 }
 
 /* ============================================
    RESET I BASE
    ============================================ */
-* {
+
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    font-size: var(--mida-base);
+    font-size: 16px;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     font-family: var(--font-principal);
-    background-color: var(--color-fons);
+    background: var(--gradient-fons);
+    background-attachment: fixed;
     color: var(--color-text);
     line-height: 1.6;
     min-height: 100vh;
-    transition: background-color var(--transicio-mitjana),
-                color var(--transicio-mitjana);
+    height: 100%;
+    overflow-x: hidden;
+    transition: background-color var(--transicio-mitjana);
 }
 
 /* ============================================
    TIPOGRAFIA
    ============================================ */
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-titols);
-    font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: var(--espai-sm);
+    font-family: var(--font-principal);
+    font-weight: 700;
+    line-height: 1.2;
     color: var(--color-text);
+    letter-spacing: 0.02em;
 }
 
-h1 {
-    font-size: var(--mida-titol);
-}
-
-h2 {
-    font-size: var(--mida-subtitol);
-}
+h1 { font-size: var(--mida-titol-gran); }
+h2 { font-size: var(--mida-titol); }
+h3 { font-size: var(--mida-subtitol); }
+h4 { font-size: var(--mida-gran); }
 
 p {
-    margin-bottom: var(--espai-sm);
     color: var(--color-text);
+    margin-bottom: var(--espai-sm);
+    font-size: var(--mida-base);
 }
 
 a {
-    color: var(--color-accent);
+    color: var(--color-primari);
     text-decoration: none;
     transition: color var(--transicio-rapida);
 }
 
 a:hover {
-    color: var(--color-primari);
+    color: var(--color-accent-verd);
 }
 
 /* ============================================
-   CONTENIDORS PRINCIPALS
+   CONTENIDORS
    ============================================ */
+
 .contenidor {
-    max-width: var(--amplada-maxima-contingut);
+    width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
     padding: var(--espai-md);
 }
@@ -165,84 +169,53 @@ a:hover {
 }
 
 /* ============================================
-   CAPÇALERA
+   TARGETES
    ============================================ */
-.capcalera {
-    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
-    padding: var(--espai-md) 0;
-    box-shadow: var(--ombra-mitjana);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color var(--transicio-mitjana);
-    border-bottom: 2px solid rgba(0, 188, 212, 0.3);
+
+.targeta {
+    background: var(--gradient-fosc);
+    border-radius: var(--radi-vora);
+    border: 1px solid var(--color-vora);
+    box-shadow: var(--ombra-mitjana), var(--ombra-cyan);
+    transition: all var(--transicio-mitjana);
+    overflow: hidden;
 }
 
-.capcalera-contingut {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: var(--amplada-maxima-contingut);
-    margin: 0 auto;
-    padding: 0 var(--espai-md);
+.targeta:hover {
+    border-color: var(--color-vora-actiu);
+    box-shadow: var(--ombra-forta), var(--ombra-cyan);
+    transform: translateY(-2px);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: var(--espai-sm);
+.targeta-verd {
+    border-color: var(--color-vora-verd);
+    box-shadow: var(--ombra-mitjana), var(--ombra-verd);
 }
 
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 700;
-    background: var(--gradient-primari);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* ============================================
-   NAVEGACIÓ
-   ============================================ */
-.nav {
-    display: flex;
-    gap: var(--espai-md);
-    align-items: center;
-}
-
-.nav-item {
-    padding: var(--espai-xs) var(--espai-sm);
-    border-radius: var(--radi-vora-petit);
-    transition: background-color var(--transicio-rapida);
-    cursor: pointer;
-}
-
-.nav-item:hover {
-    background-color: var(--color-fons-targeta);
+.targeta-verd:hover {
+    box-shadow: var(--ombra-forta), var(--ombra-verd);
 }
 
 /* ============================================
    BOTONS
    ============================================ */
+
 .btn {
-    padding: var(--espai-sm) var(--espai-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espai-xs);
+    padding: 10px 24px;
     border: none;
-    border-radius: var(--radi-vora);
+    border-radius: var(--radi-vora-petit);
+    font-family: var(--font-principal);
     font-size: var(--mida-base);
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transicio-rapida);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--espai-xs);
     text-decoration: none;
-    box-shadow: var(--ombra-suau);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -254,173 +227,165 @@ a:hover {
     transform: translateY(0);
 }
 
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 .btn-primari {
     background: var(--gradient-primari);
-    color: white;
-    border: none;
+    color: var(--color-blanc);
 }
 
 .btn-primari:hover {
-    background: var(--gradient-secundari);
+    background: linear-gradient(135deg, #00b4d0 0%, #006699 100%);
 }
 
-.btn-secundari {
-    background-color: transparent;
-    border: 2px solid var(--color-primari);
-    color: var(--color-primari);
+.btn-vermell {
+    background: var(--gradient-vermell);
+    color: var(--color-blanc);
+    font-size: var(--mida-gran);
+    padding: 14px 40px;
+    border-radius: var(--radi-vora);
+    letter-spacing: 0.05em;
 }
 
-.btn-secundari:hover {
-    background-color: rgba(0, 188, 212, 0.1);
+.btn-vermell:hover {
+    background: linear-gradient(135deg, #ff6666 0%, #ee2200 100%);
 }
 
-.btn-exit {
-    background: var(--gradient-accent);
-    color: white;
-    border: none;
+.btn-vermell:disabled {
+    background: var(--color-gris-fosc);
+    color: var(--color-gris);
 }
 
 .btn-contorn {
-    background-color: transparent;
-    border: 2px solid var(--color-primari);
+    background: transparent;
+    border: 1px solid var(--color-primari);
     color: var(--color-primari);
 }
 
 .btn-contorn:hover {
-    background: var(--gradient-primari);
-    color: white;
-}
-
-.btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
+    background: rgba(0, 200, 232, 0.1);
 }
 
 .btn-gran {
-    padding: var(--espai-md) var(--espai-xl);
+    padding: 14px 48px;
     font-size: var(--mida-gran);
-}
-
-/* ============================================
-   TARGETES
-   ============================================ */
-.targeta {
-    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
     border-radius: var(--radi-vora);
-    padding: var(--espai-md);
-    box-shadow: var(--ombra-mitjana);
-    transition: transform var(--transicio-mitjana),
-                box-shadow var(--transicio-mitjana);
-    border: 1px solid rgba(0, 188, 212, 0.2);
-}
-
-.targeta:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--ombra-forta);
-}
-
-.targeta-capcalera {
-    border-bottom: 2px solid var(--color-primari);
-    padding-bottom: var(--espai-sm);
-    margin-bottom: var(--espai-md);
-}
-
-.targeta-titol {
-    font-size: var(--mida-subtitol);
-    background: var(--gradient-primari);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.targeta-cos {
-    padding: var(--espai-sm) 0;
 }
 
 /* ============================================
-   FORMULARIS
+   FORMULARIS - BASE
    ============================================ */
-.grup-formulari {
-    margin-bottom: var(--espai-md);
-}
 
 .etiqueta-formulari {
     display: block;
-    margin-bottom: var(--espai-xs);
+    font-size: var(--mida-petita);
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-text-secundari);
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .input-formulari,
-.select-formulari,
-.textarea-formulari {
+.select-formulari {
     width: 100%;
-    padding: var(--espai-sm);
-    border: 2px solid rgba(0, 188, 212, 0.3);
+    padding: 8px 12px;
+    background: rgba(10, 27, 42, 0.6);
+    border: 1px solid var(--color-vora);
     border-radius: var(--radi-vora-petit);
-    background-color: rgba(19, 47, 76, 0.5);
     color: var(--color-text);
-    font-size: var(--mida-base);
     font-family: var(--font-principal);
-    transition: border-color var(--transicio-rapida);
+    font-size: var(--mida-base);
+    transition: all var(--transicio-rapida);
+    outline: none;
 }
 
 .input-formulari:focus,
-.select-formulari:focus,
-.textarea-formulari:focus {
-    outline: none;
+.select-formulari:focus {
     border-color: var(--color-primari);
-    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+    background: rgba(10, 27, 42, 0.9);
+    box-shadow: 0 0 0 3px rgba(0, 200, 232, 0.1);
 }
 
 .input-formulari.error {
-    border-color: var(--color-error);
+    border-color: var(--color-accent-vermell);
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+}
+
+.input-formulari.exit {
+    border-color: var(--color-accent-verd);
+}
+
+.input-formulari::placeholder {
+    color: var(--color-gris);
+    font-size: var(--mida-petita);
+}
+
+.select-formulari option {
+    background: var(--color-fons-secundari);
+    color: var(--color-text);
+}
+
+.ajuda-formulari {
+    display: block;
+    font-size: var(--mida-xs);
+    color: var(--color-gris);
+    margin-top: 3px;
 }
 
 .error-formulari {
-    color: var(--color-error);
-    font-size: var(--mida-petita);
-    margin-top: var(--espai-xs);
     display: none;
+    font-size: var(--mida-xs);
+    color: var(--color-accent-vermell);
+    margin-top: 4px;
+    padding: 3px 8px;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 4px;
+    border-left: 2px solid var(--color-accent-vermell);
 }
 
 .error-formulari.actiu {
     display: block;
 }
 
-.ajuda-formulari {
-    font-size: var(--mida-petita);
-    color: var(--color-text-secundari);
-    margin-top: var(--espai-xs);
+.obligatori {
+    color: var(--color-accent-vermell);
+    margin-left: 2px;
 }
 
-/* Checkbox personalitzat */
-.contenidor-checkbox {
-    display: flex;
-    align-items: center;
-    gap: var(--espai-sm);
-    cursor: pointer;
-    user-select: none;
-}
+/* ============================================
+   CHECKBOX I RADIO
+   ============================================ */
 
-.input-checkbox {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
+input[type="checkbox"],
+input[type="radio"] {
     accent-color: var(--color-primari);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
 
 /* ============================================
    UTILITATS
    ============================================ */
-.text-centre {
-    text-align: center;
-}
 
-.text-dreta {
-    text-align: right;
-}
+.text-centre { text-align: center; }
+.text-dreta { text-align: right; }
+.text-esquerra { text-align: left; }
+
+.text-primari { color: var(--color-primari); }
+.text-verd { color: var(--color-accent-verd); }
+.text-groc { color: var(--color-accent-groc); }
+.text-gris { color: var(--color-text-secundari); }
+.text-mono { font-family: var(--font-mono); }
+
+.fw-bold { font-weight: 700; }
+.fw-light { font-weight: 300; }
 
 .mt-1 { margin-top: var(--espai-xs); }
 .mt-2 { margin-top: var(--espai-sm); }
@@ -432,83 +397,68 @@ a:hover {
 .mb-3 { margin-bottom: var(--espai-md); }
 .mb-4 { margin-bottom: var(--espai-lg); }
 
-.p-1 { padding: var(--espai-xs); }
-.p-2 { padding: var(--espai-sm); }
-.p-3 { padding: var(--espai-md); }
-.p-4 { padding: var(--espai-lg); }
-
-.ocult {
-    display: none !important;
-}
-
-.visible {
-    display: block !important;
-}
+.ocult { display: none !important; }
+.visible { display: block !important; }
 
 /* ============================================
    ANIMACIONS
    ============================================ */
+
 @keyframes apareix {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.apareix {
-    animation: apareix var(--transicio-lenta);
+@keyframes apareix-esquerra {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes gira {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.spinner {
-    animation: gira 1s linear infinite;
+@keyframes parpelleja {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
 }
 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
 }
 
-.shake {
-    animation: shake 0.5s;
+@keyframes pols-cyan {
+    0% { box-shadow: 0 0 0 0 rgba(0, 200, 232, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 200, 232, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 200, 232, 0); }
 }
+
+.apareix { animation: apareix 0.5s ease forwards; }
+.apareix-esquerra { animation: apareix-esquerra 0.5s ease forwards; }
+.gira { animation: gira 1s linear infinite; }
+.parpelleja { animation: parpelleja 1.5s ease infinite; }
+.shake { animation: shake 0.4s ease; }
+.pols { animation: pols-cyan 2s ease infinite; }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE BASE
    ============================================ */
+
+@media (max-width: 1200px) {
+    :root {
+        --mida-titol-gran: 28px;
+        --mida-titol: 24px;
+    }
+}
+
 @media (max-width: 768px) {
     :root {
-        --mida-titol: 24px;
-        --mida-subtitol: 20px;
-        --espai-md: 16px;
-        --espai-lg: 24px;
-    }
-    
-    .capcalera-contingut {
-        flex-direction: column;
-        gap: var(--espai-sm);
-    }
-    
-    .nav {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .nav-item {
-        width: 100%;
-        text-align: center;
+        --mida-titol-gran: 24px;
+        --mida-titol: 20px;
+        --espai-md: 14px;
+        --espai-lg: 20px;
     }
 }

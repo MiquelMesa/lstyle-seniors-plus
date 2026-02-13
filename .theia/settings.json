@@ -1,0 +1,23 @@
+{
+    "editor.inlayHints.enabled": "off",
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.horizontalScrollbarSize": 16,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 16,
+    "editor.wordWrap": "on",
+    "files.autoGuessEncoding": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "debug.confirmOnExit": "always",
+    "cSpell.language": "ca, en, es"
+}

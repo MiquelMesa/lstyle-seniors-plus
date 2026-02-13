@@ -1,242 +1,566 @@
 /**
  * ============================================
  * LSTYLE-SENIORS-PLUS
- * Estils per a Pantalles
+ * Estils de Pantalles
  * ============================================
  */
-
-/* ============================================
-   PANTALLES GENERALS
-   ============================================ */
-.pantalla {
-    min-height: 100vh;
-    padding: var(--espai-lg) 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ============================================
-   PANTALLA DE CÀRREGA
-   ============================================ */
-.pantalla-carrega {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-fons);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity var(--transicio-mitjana);
-}
-
-.pantalla-carrega.ocultar {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.contenidor-carrega {
-    text-align: center;
-}
-
-.logo-carrega {
-    width: 120px;
-    height: auto;
-    margin-bottom: var(--espai-md);
-    animation: apareix 0.5s ease;
-}
-
-.spinner-container {
-    margin: var(--espai-lg) 0;
-}
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid var(--color-fons-secundari);
-    border-top: 4px solid var(--color-primari);
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.text-carrega {
-    color: var(--color-text-secundari);
-    font-size: var(--mida-gran);
-    margin-top: var(--espai-md);
-}
-
-/* ============================================
-   PANTALLA DISCLAIMER - COMPACTA
-   ============================================ */
-.targeta-disclaimer {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.targeta-disclaimer .targeta-capcalera {
-    text-align: center;
-    margin-bottom: var(--espai-md);
-    padding-bottom: var(--espai-sm);
-}
-
-.targeta-disclaimer .logo-principal {
-    width: 80px;
-    height: auto;
-    margin-bottom: var(--espai-sm);
-}
-
-.targeta-disclaimer .targeta-titol {
-    margin-bottom: var(--espai-xs);
-}
-
-.targeta-disclaimer .subtitol {
-    font-size: var(--mida-base);
-    color: var(--color-text-secundari);
-    margin-top: var(--espai-xs);
-}
-
-/* Contingut en 2 columnes */
-.contingut-disclaimer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--espai-md);
-    margin-bottom: var(--espai-md);
-}
-
-.contingut-disclaimer h3 {
-    font-size: var(--mida-base);
-    color: var(--color-accent);
-    margin-top: var(--espai-sm);
-    margin-bottom: var(--espai-xs);
-}
-
-.contingut-disclaimer p {
-    font-size: var(--mida-petita);
-    margin-bottom: var(--espai-sm);
-    line-height: 1.5;
-}
-
-/* Llista de fonts compacta */
-.llista-fonts {
-    list-style: none;
-    padding: 0;
-}
-
-.llista-fonts li {
-    margin-bottom: var(--espai-xs);
-    padding: var(--espai-xs);
-    background-color: rgba(26, 58, 82, 0.3);
-    border-radius: var(--radi-vora-petit);
-    border-left: 3px solid var(--color-accent);
-    font-size: var(--mida-petita);
-}
-
-.llista-fonts li strong {
-    color: var(--color-accent);
-    display: block;
-    font-size: 13px;
-}
-
-.llista-fonts a {
-    font-size: 11px;
-    word-break: break-all;
-    color: var(--color-primari);
-}
-
-/* Acceptació i botons en una sola línia */
-.seccio-acceptacio-botons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--espai-md);
-    background-color: rgba(19, 47, 76, 0.5);
-    padding: var(--espai-md);
-    border-radius: var(--radi-vora);
-    border: 2px solid rgba(0, 188, 212, 0.3);
-}
-
-.seccio-acceptacio-botons .contenidor-checkbox {
-    flex: 1;
-}
-
-.seccio-acceptacio-botons .text-checkbox {
-    font-size: var(--mida-petita);
-    line-height: 1.4;
-}
 
 /* ============================================
    BOTÓ PANTALLA COMPLETA
    ============================================ */
 .btn-pantalla-completa {
     position: fixed;
-    top: var(--espai-md);
-    right: var(--espai-md);
+    top: 14px;
+    right: 14px;
     z-index: 10000;
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background: var(--gradient-primari);
-    border: none;
+    background: rgba(26, 45, 63, 0.92);
+    border: 1px solid var(--color-vora);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--ombra-mitjana);
+    color: var(--color-primari);
+    backdrop-filter: blur(8px);
     transition: all var(--transicio-rapida);
-    color: white;
+    box-shadow: var(--ombra-suau);
 }
 
 .btn-pantalla-completa:hover {
-    background: var(--gradient-secundari);
+    background: rgba(0, 200, 232, 0.15);
+    border-color: var(--color-primari);
     transform: scale(1.1);
-    box-shadow: var(--ombra-forta);
+    box-shadow: var(--ombra-cyan);
 }
 
-.btn-pantalla-completa:active {
-    transform: scale(0.95);
+/* ============================================
+   PANTALLA 1: INICI (spinner inicial)
+   ============================================ */
+.pantalla-inici {
+    position: fixed;
+    inset: 0;
+    background: var(--color-fons);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
 }
 
-.btn-pantalla-completa.ocult {
+.pantalla-inici.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.inici-contingut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.inici-titol {
+    font-family: var(--font-principal);
+    font-size: var(--mida-titol);
+    font-weight: 900;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.inici-spinner {
+    width: 60px;
+    height: 60px;
+}
+
+.spinner-ring {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(0, 200, 232, 0.15);
+    border-top: 4px solid var(--color-primari);
+    border-radius: 50%;
+    animation: gira 1s linear infinite;
+}
+
+/* ============================================
+   PANTALLA 2: DISCLAIMER
+   ============================================ */
+.pantalla-disclaimer {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--gradient-fons);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 32px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+/* ---- Bloc principal (imatge + dreta) ---- */
+.disclaimer-principal {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: center;
+    background: linear-gradient(145deg, #1a3a5c 0%, #1a2d3f 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 200, 232, 0.2);
+    padding: 28px 36px;
+    box-shadow: var(--ombra-mitjana), var(--ombra-cyan);
+}
+
+/* Imatge disclaimer */
+.disclaimer-esquerra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disclaimer-imatge {
+    width: 260px;
+    height: auto;
+    border-radius: 14px;
+    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+    transition: transform var(--transicio-mitjana);
+}
+
+.disclaimer-imatge:hover {
+    transform: scale(1.02);
+}
+
+/* Contingut dret */
+.disclaimer-dreta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.disclaimer-titols {
+    text-align: right;
+    width: 100%;
+}
+
+.disclaimer-titol {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--color-blanc);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.disclaimer-subtitol {
+    font-size: var(--mida-gran);
+    color: var(--color-accent-groc);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Acceptació i botó */
+.disclaimer-acceptacio {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.disclaimer-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    max-width: 480px;
+}
+
+.disclaimer-checkbox {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--color-primari);
+}
+
+.disclaimer-checkbox-text {
+    font-size: var(--mida-base);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+#btn-continuar-disclaimer {
+    min-width: 180px;
+    font-size: var(--mida-gran);
+    padding: 14px 36px;
+    border-radius: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ---- 4 Targetes informatives ---- */
+.disclaimer-targetes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.disclaimer-targeta {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 20px;
+    backdrop-filter: blur(4px);
+    transition: all var(--transicio-mitjana);
+}
+
+.disclaimer-targeta:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(0, 200, 232, 0.3);
+    transform: translateY(-2px);
+}
+
+.disclaimer-targeta h3 {
+    font-size: var(--mida-base);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.disclaimer-targeta p {
+    font-size: var(--mida-petita);
+    color: var(--color-text-secundari);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---- Fonts oficials ---- */
+.disclaimer-fonts {
+    background: linear-gradient(145deg, rgba(0, 60, 30, 0.5), rgba(0, 40, 20, 0.4));
+    border-radius: 12px;
+    border: 1px solid var(--color-vora-verd);
+    padding: 14px 24px;
+    box-shadow: var(--ombra-verd);
+}
+
+.disclaimer-fonts-titol {
+    font-size: var(--mida-base);
+    font-weight: 700;
+    color: var(--color-accent-verd);
+    margin-bottom: 8px;
+}
+
+.disclaimer-fonts-text {
+    font-family: var(--font-mono);
+    font-size: var(--mida-petita);
+    color: var(--color-text-mono);
+    line-height: 1.6;
+}
+
+/* ============================================
+   PANTALLA 3: CÀRREGA DE DADES
+   ============================================ */
+.pantalla-carrega-dades {
+    position: fixed;
+    inset: 0;
+    background: var(--gradient-fons);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+    transition: opacity 0.5s ease;
+}
+
+.pantalla-carrega-dades.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carrega-contingut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    text-align: center;
+    animation: apareix 0.6s ease;
+}
+
+.carrega-logo-petit {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-family: var(--font-principal);
+    font-size: var(--mida-titol);
+    font-weight: 900;
+    color: var(--color-primari);
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+}
+
+.carrega-titol {
+    font-family: var(--font-principal);
+    font-size: var(--mida-titol);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.carrega-imatge {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 8px 28px rgba(0, 200, 232, 0.25));
+    animation: apareix 0.8s ease;
+}
+
+.carrega-text {
+    font-family: var(--font-principal);
+    font-size: var(--mida-subtitol);
+    color: var(--color-primari);
+    letter-spacing: 0.1em;
+    animation: parpelleja 2s ease infinite;
+}
+
+/* ============================================
+   PANTALLA 4: ENTRADA DE DADES
+   ============================================ */
+.pantalla-entrada {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--gradient-fons);
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+/* Capçalera */
+.entrada-capcalera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.entrada-capcalera-esquerra h2 {
+    font-size: var(--mida-titol);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.entrada-capcalera-esquerra p {
+    font-size: var(--mida-base);
+    color: var(--color-text-secundari);
+    margin: 0;
+}
+
+.entrada-capcalera-dreta {
+    font-size: var(--mida-titol);
+    font-weight: 900;
+    color: var(--color-text);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: right;
+    white-space: nowrap;
+    opacity: 0.85;
+}
+
+.entrada-separador {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin: 0;
+}
+
+/* ---- Grid de targetes ---- */
+.formulari-dades {
+    flex: 1;
+}
+
+.entrada-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 14px;
+    align-items: start;
+}
+
+/* Columnes de les targetes */
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-12 { grid-column: span 12; }
+
+/* Col-12 centrat (hàbits) */
+.col-12-centrat {
+    grid-column: 3 / span 8;
+}
+
+/* Botons */
+.botons-accio {
+    grid-column: span 12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-vora);
+}
+
+.botons-dreta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.camps-obligatoris-nota {
+    font-size: var(--mida-petita);
+    color: var(--color-text-secundari);
+}
+
+/* ---- Targeta de secció ---- */
+.seccio-targeta {
+    background: linear-gradient(145deg, var(--color-fons-secundari), var(--color-fons-targeta));
+    border-radius: 14px;
+    border: 1px solid var(--color-vora-verd);
+    padding: 16px 18px;
+    box-shadow: var(--ombra-suau), var(--ombra-verd);
+    transition: all var(--transicio-mitjana);
+}
+
+.seccio-targeta:hover {
+    border-color: rgba(0, 230, 118, 0.6);
+    box-shadow: var(--ombra-mitjana), var(--ombra-verd);
+}
+
+/* Títol de la secció */
+.seccio-titol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--mida-base);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 230, 118, 0.2);
+}
+
+.seccio-numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: var(--gradient-verd);
+    color: var(--color-fons);
+    border-radius: 50%;
+    font-size: var(--mida-xs);
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* Camps obligatoris */
+.obligatori {
+    color: var(--color-accent-vermell);
+    font-weight: 700;
+}
+
+/* Text loading */
+.carregant-text {
+    font-size: var(--mida-petita);
+    color: var(--color-gris);
+    text-align: center;
+    padding: 8px;
+    animation: parpelleja 1.5s ease infinite;
+}
+
+/* ============================================
+   TOOLTIP GLOBAL
+   ============================================ */
+.tooltip-global {
+    position: fixed;
+    z-index: 99999;
+    background: rgba(10, 27, 42, 0.97);
+    border: 1px solid var(--color-primari);
+    border-radius: 8px;
+    padding: 10px 14px;
+    max-width: 280px;
+    font-size: var(--mida-petita);
+    color: var(--color-text);
+    line-height: 1.5;
+    box-shadow: var(--ombra-forta), var(--ombra-cyan);
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooltip-global.ocult {
     display: none;
 }
 
-.btn-pantalla-completa svg {
-    transition: transform var(--transicio-rapida);
+.tooltip-icona {
+    cursor: help;
+    font-size: 13px;
+    opacity: 0.7;
+    transition: opacity var(--transicio-rapida);
+    margin-left: 3px;
+    user-select: none;
 }
 
-.btn-pantalla-completa:hover svg {
-    transform: rotate(90deg);
+.tooltip-icona:hover {
+    opacity: 1;
 }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 768px) {
-    .btn-pantalla-completa {
-        width: 45px;
-        height: 45px;
-        top: var(--espai-sm);
-        right: var(--espai-sm);
+@media (max-width: 1400px) {
+    .disclaimer-targetes {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
-    .btn-pantalla-completa svg {
-        width: 20px;
-        height: 20px;
+    .disclaimer-fonts-text {
+        font-size: var(--mida-xs);
     }
-    
-    .contingut-disclaimer {
+}
+
+@media (max-width: 1200px) {
+    .col-3, .col-4, .col-5 {
+        grid-column: span 6;
+    }
+    .col-12-centrat {
+        grid-column: span 12;
+    }
+    .disclaimer-principal {
+        grid-template-columns: 200px 1fr;
+    }
+    .disclaimer-imatge {
+        width: 190px;
+    }
+}
+
+@media (max-width: 900px) {
+    .disclaimer-principal {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .disclaimer-dreta {
+        align-items: center;
+    }
+    .disclaimer-titols {
+        text-align: center;
+    }
+    .disclaimer-imatge {
+        width: 160px;
+    }
+    .disclaimer-targetes {
         grid-template-columns: 1fr;
     }
-    
-    .seccio-acceptacio-botons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .seccio-acceptacio-botons .contenidor-checkbox {
-        margin-bottom: var(--espai-sm);
+    .col-3, .col-4, .col-5, .col-6 {
+        grid-column: span 12;
     }
 }
