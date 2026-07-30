@@ -1,0 +1,623 @@
+/**
+ * ============================================
+ * LSTYLE-SENIORS-PLUS
+ * Estils Principals - Sistema Unificat
+ * ============================================
+ */
+
+/* ============================================
+   VARIABLES CSS
+   ============================================ */
+
+:root {
+    /* Colors principals - Paleta ameliorada amb més sofisticació */
+    --color-fons: #0a1929;
+    --color-fons-secundari: #132f4c;
+    --color-fons-targeta: #162534;
+    --color-fons-targeta-hover: #1e3448;
+    /* Nouveaux accents per més vitalitat i sofisticació */
+    --color-accent-cyan: #00ffff;
+    --color-accent-cyan-hover: #66ffff;
+    --color-accent-magenta: #ff00ff;
+    --color-accent-magenta-hover: #ff66ff;
+    --color-accent-violet: #8a2be2;
+    --color-accent-violet-hover: #a64eff;
+
+    /* Textos */
+    --color-text: #e8f4fd;
+    --color-text-secundari: #9fb9cb;
+    --color-text-subtitol: #f0c040;
+    --color-text-mono: #b8d8f0;
+
+    /* Accents */
+    --color-primari: #00c8e8;
+    --color-primari-hover: #33d4f0;
+    --color-accent-verd: #00e676;
+    --color-accent-verd-hover: #33f08c;
+    --color-accent-groc: #f0c040;
+    --color-accent-groc-hover: #f8d060;
+    --color-accent-vermell: #ff4444;
+    --color-accent-vermell-hover: #ff6666;
+
+    /* Neutres amb més sofisticació */
+    --color-blanc: #ffffff;
+    --color-gris-clar: #d6e2ec;
+    --color-gris: #8baabf;
+    --color-gris-fosc: #4a6072;
+    --color-gris-molt-fosc: #2a3e4e;
+
+    /* Vores millors */
+    --color-vora: rgba(0, 200, 232, 0.18);
+    --color-vora-verd: rgba(0, 230, 118, 0.22);
+    --color-vora-actiu: rgba(0, 200, 232, 0.6);
+
+    /* Gradients més sofisticats */
+    --gradient-primari: linear-gradient(135deg, #00c8e8 0%, #0099cc 100%);
+    --gradient-verd: linear-gradient(135deg, #00e676 0%, #00c8e8 100%);
+    --gradient-fosc: linear-gradient(145deg, #1a2d3f 0%, #162534 100%);
+    --gradient-vermell: linear-gradient(135deg, #ff4444 0%, #e63939 100%);
+    --gradient-cian: linear-gradient(135deg, #00ffff 0%, #66ffff 100%);
+    --gradient-magenta: linear-gradient(135deg, #ff00ff 0%, #ff66ff 100%);
+    --gradient-fons:
+        radial-gradient(ellipse at 15% 20%, rgba(0, 200, 232, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 12%, rgba(0, 136, 204, 0.12) 0%, transparent 48%),
+        radial-gradient(ellipse at 50% 90%, rgba(0, 230, 118, 0.06) 0%, transparent 48%),
+        radial-gradient(ellipse at 20% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 55%),
+        #0a1929;
+
+    /* Ombres més suaus i naturals */
+    --ombra-suau: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --ombra-mitjana: 0 8px 24px rgba(0, 0, 0, 0.25);
+    --ombra-forta: 0 12px 32px rgba(0, 0, 0, 0.3);
+    --ombra-cyan: 0 0 20px rgba(0, 200, 232, 0.1);
+    --ombra-verd: 0 0 18px rgba(0, 230, 118, 0.12);
+
+    /* Tipografia millora */
+    --font-principal: 'Exo 2', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'Share Tech Mono', 'JetBrains Mono', 'Courier New', monospace;
+
+    --mida-xs: 12px;
+    --mida-petita: 14px;
+    --mida-base: 16px;
+    --mida-gran: 18px;
+    --mida-subtitol: 20px;
+    --mida-titol: 28px;
+    --mida-titol-gran: 36px;
+
+    /* Espaiat més equilibrat */
+    --espai-xs: 8px;
+    --espai-sm: 16px;
+    --espai-md: 24px;
+    --espai-lg: 32px;
+    --espai-xl: 40px;
+
+    /* Radis més suaus */
+    --radi-vora: 18px;
+    --radi-vora-petit: 12px;
+    --radi-vora-gran: 24px;
+
+    /* Transicions més fluides */
+    --transicio-rapida: 0.1s ease;
+    --transicio-mitjana: 0.25s ease;
+    --transicio-lenta: 0.4s ease;
+    
+    /* Nouves variables per a detalls addicionals */
+    --color-fons-suau: rgba(10, 25, 41, 0.7);
+    --color-fons-molt-suau: rgba(10, 25, 41, 0.4);
+    --color-text-suau: rgba(232, 244, 253, 0.7);
+    --border-radius-interior: 8px;
+}
+
+/* ============================================
+   RESET I BASE
+   ============================================ */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-principal);
+    background: var(--gradient-fons);
+    background-attachment: fixed;
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   TIPOGRAFIA
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-principal);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-text);
+    letter-spacing: 0.02em;
+}
+
+h1 { font-size: var(--mida-titol-gran); }
+h2 { font-size: var(--mida-titol); }
+h3 { font-size: var(--mida-subtitol); }
+h4 { font-size: var(--mida-gran); }
+
+p {
+    color: var(--color-text-secundari);
+    margin-bottom: var(--espai-sm);
+    font-size: var(--mida-base);
+}
+
+a {
+    color: var(--color-primari);
+    text-decoration: none;
+    transition: color var(--transicio-rapida);
+}
+
+a:hover { color: var(--color-accent-verd); }
+
+/* ============================================
+    COMPONENTS BASE
+    ============================================ */
+
+.targeta {
+    background: var(--gradient-fosc);
+    border-radius: var(--radi-vora);
+    border: 1px solid var(--color-vora);
+    box-shadow: var(--ombra-suau);
+    transition: all var(--transicio-mitjana);
+    position: relative;
+    overflow: hidden;
+}
+
+.targeta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.targeta:hover {
+    border-color: var(--color-vora-actiu);
+    box-shadow: var(--ombra-mitjana), var(--ombra-cyan);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.targeta:hover::before {
+    left: 100%;
+}
+
+.targeta:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+/* Nouveaux effets pour les boutons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espai-xs);
+    padding: 10px 24px;
+    border: none;
+    border-radius: var(--radi-vora-petit);
+    font-family: var(--font-principal);
+    font-size: var(--mida-base);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombra-mitjana);
+    border-color: var(--color-vora-actiu);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Effets spéciaux pour les boutons de couleur */
+.btn-primari {
+    background: var(--gradient-primari);
+    color: var(--color-blanc);
+}
+
+.btn-primari:hover {
+    background: linear-gradient(135deg, #00b4d0 0%, #006fa8 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 200, 232, 0.3);
+}
+
+.btn-vermell {
+    background: linear-gradient(135deg, #e03030 0%, #cc1010 100%);
+    color: var(--color-blanc);
+    font-size: 19px;
+    padding: 14px 48px;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 16px rgba(220, 30, 30, 0.3);
+}
+
+.btn-vermell:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff3333 0%, #dd1111 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 30, 30, 0.4);
+}
+
+/* Boutons avec accents spéciaux */
+.btn-cian {
+    background: var(--gradient-cian);
+    color: #0a1929;
+}
+
+.btn-cian:hover {
+    background: linear-gradient(135deg, #33ffff 0%, #66ffff 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+.btn-magenta {
+    background: var(--gradient-magenta);
+    color: #0a1929;
+}
+
+.btn-magenta:hover {
+    background: linear-gradient(135deg, #ff33ff 0%, #ff66ff 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 0, 255, 0.3);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espai-xs);
+    padding: 10px 24px;
+    border: none;
+    border-radius: var(--radi-vora-petit);
+    font-family: var(--font-principal);
+    font-size: var(--mida-base);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ombra-mitjana);
+}
+
+.btn:active { transform: translateY(0); }
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-primari {
+    background: var(--gradient-primari);
+    color: var(--color-blanc);
+}
+
+.btn-primari:hover {
+    background: linear-gradient(135deg, #00b4d0 0%, #006fa8 100%);
+}
+
+.btn-vermell {
+    background: linear-gradient(135deg, #e03030 0%, #cc1010 100%);
+    color: var(--color-blanc);
+    font-size: 19px;
+    padding: 14px 48px;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 16px rgba(220, 30, 30, 0.3);
+}
+
+.btn-vermell:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff3333 0%, #dd1111 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 30, 30, 0.4);
+}
+
+.btn-vermell:disabled {
+    background: linear-gradient(135deg, #3a4f60 0%, #2a3f50 100%);
+    color: #70879a;
+}
+
+.btn-contorn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-primari);
+    color: var(--color-primari);
+}
+
+.btn-contorn:hover {
+    background: rgba(0, 200, 232, 0.12);
+}
+
+.btn-gran {
+    padding: 14px 44px;
+    font-size: var(--mida-gran);
+    border-radius: 12px;
+}
+
+/* ============================================
+   FORM BASE
+   ============================================ */
+
+.input-formulari,
+.select-formulari {
+    width: 100%;
+    padding: 9px 12px;
+    background: rgba(10, 27, 42, 0.66);
+    border: 1px solid var(--color-vora);
+    border-radius: var(--radi-vora-petit);
+    color: var(--color-text);
+    font-family: var(--font-principal);
+    font-size: var(--mida-base);
+    transition: all var(--transicio-rapida);
+    outline: none;
+}
+
+.input-formulari:focus,
+.select-formulari:focus {
+    border-color: var(--color-primari);
+    background: rgba(10, 27, 42, 0.86);
+    box-shadow: 0 0 0 3px rgba(0, 200, 232, 0.14);
+}
+
+.input-formulari.error {
+    border-color: var(--color-accent-vermell);
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.14);
+}
+
+.input-formulari.exit {
+    border-color: var(--color-accent-verd);
+}
+
+.input-formulari::placeholder {
+    color: var(--color-gris);
+    font-size: var(--mida-petita);
+}
+
+.select-formulari option {
+    background: var(--color-fons-secundari);
+    color: var(--color-text);
+}
+
+.obligatori {
+    color: var(--color-accent-vermell);
+    margin-left: 2px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--color-primari);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ============================================
+   LUCIDE ICONS — MIDES
+   ============================================ */
+
+.lucide-14 { width: 14px; height: 14px; }
+.lucide-16 { width: 16px; height: 16px; }
+.lucide-20 { width: 20px; height: 20px; }
+.lucide-28 { width: 28px; height: 28px; }
+.lucide-32 { width: 32px; height: 32px; }
+
+/* ============================================
+   UTILITATS
+   ============================================ */
+
+.ocult { display: none !important; }
+.visible { display: block !important; }
+
+/* ============================================
+   ANIMACIONS
+   ============================================ */
+
+@keyframes apareix {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gira {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes parpelleja {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(145deg, rgba(19, 47, 76, 0.95) 0%, rgba(10, 25, 41, 0.98) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    font-family: var(--font-principal);
+    font-size: 14px;
+    color: var(--color-text);
+    pointer-events: auto;
+    min-width: 260px;
+    max-width: 400px;
+    /* Animations handled by Animate.css in JS */
+}
+
+.toast-icona {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.toast-missatge {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* Variants */
+.toast--exit {
+    border-color: rgba(0, 230, 118, 0.2);
+}
+.toast--exit .toast-icona { color: #00e676; }
+
+.toast--error {
+    border-color: rgba(255, 82, 82, 0.2);
+}
+.toast--error .toast-icona { color: #ff5252; }
+
+.toast--info {
+    border-color: rgba(0, 200, 232, 0.2);
+}
+.toast--info .toast-icona { color: #00c8e8; }
+
+/* Toast animations removed - using Animate.css slideInRight/slideOutRight */
+
+@media (max-width: 768px) {
+    .toast-container {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+    }
+    .toast {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Skeleton loading */
+@keyframes skeleton-pulse {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 25%,
+        rgba(255, 255, 255, 0.08) 50%,
+        rgba(255, 255, 255, 0.04) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.8s ease-in-out infinite;
+    border-radius: 8px;
+}
+
+.skeleton-grup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.skeleton-linia {
+    height: 18px;
+    width: 100%;
+}
+
+.skeleton-bloc {
+    height: 48px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Transicions entre pantalles - using Animate.css fadeInUp/fadeOut */
+
+/* ============================================
+   RESPONSIVE BASE
+   ============================================ */
+
+@media (max-width: 1200px) {
+    :root {
+        --mida-titol-gran: 34px;
+        --mida-titol: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --mida-titol-gran: 28px;
+        --mida-titol: 24px;
+        --mida-subtitol: 20px;
+        --espai-md: 14px;
+        --espai-lg: 20px;
+    }
+}

@@ -1,0 +1,595 @@
+/**
+ * ============================================
+ * LSTYLE-SENIORS-PLUS
+ * Estils del Formulari d'Entrada de Dades
+ * ============================================
+ */
+
+/* ============================================
+    ETIQUETES I GRUPS
+    ============================================ */
+.camp-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: var(--mida-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secundari);
+}
+
+.camp-grup {
+    margin-bottom: 16px;
+}
+
+.camp-grup:last-child {
+    margin-bottom: 0;
+}
+
+.camp-fila-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+/* Millora dels placeholders */
+.input-formulari::placeholder,
+.select-formulari::placeholder {
+    color: var(--color-text-suau);
+    font-size: var(--mida-petita);
+    transition: opacity 0.2s ease;
+}
+
+.input-formulari:focus::placeholder,
+.select-formulari:focus::placeholder {
+    opacity: 0.7;
+}
+
+/* ============================================
+   INPUTS
+   ============================================ */
+.input-formulari,
+.select-formulari {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    background: rgba(5, 16, 28, 0.75);
+    color: var(--color-text);
+    font-size: var(--mida-base);
+    font-family: var(--font-principal);
+    outline: none;
+    transition: all 0.25s ease;
+    min-height: 44px;
+}
+
+.input-formulari:focus,
+.select-formulari:focus {
+    border-color: rgba(0, 200, 232, 0.35);
+    background: rgba(5, 16, 28, 0.9);
+    box-shadow: 0 0 0 3px rgba(0, 200, 232, 0.08), 0 0 16px rgba(0, 200, 232, 0.04);
+}
+
+/* Focus accent per secció */
+.seccio-targeta[data-accent="verd"] .input-formulari:focus,
+.seccio-targeta[data-accent="verd"] .select-formulari:focus {
+    border-color: rgba(0, 230, 118, 0.35);
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.08), 0 0 16px rgba(0, 230, 118, 0.04);
+}
+.seccio-targeta[data-accent="vermell"] .input-formulari:focus,
+.seccio-targeta[data-accent="vermell"] .select-formulari:focus {
+    border-color: rgba(255, 82, 82, 0.35);
+    box-shadow: 0 0 0 3px rgba(255, 82, 82, 0.08), 0 0 16px rgba(255, 82, 82, 0.04);
+}
+.seccio-targeta[data-accent="groc"] .input-formulari:focus,
+.seccio-targeta[data-accent="groc"] .select-formulari:focus {
+    border-color: rgba(240, 192, 64, 0.35);
+    box-shadow: 0 0 0 3px rgba(240, 192, 64, 0.08), 0 0 16px rgba(240, 192, 64, 0.04);
+}
+.seccio-targeta[data-accent="taronja"] .input-formulari:focus,
+.seccio-targeta[data-accent="taronja"] .select-formulari:focus {
+    border-color: rgba(255, 145, 0, 0.35);
+    box-shadow: 0 0 0 3px rgba(255, 145, 0, 0.08), 0 0 16px rgba(255, 145, 0, 0.04);
+}
+.seccio-targeta[data-accent="lila"] .input-formulari:focus,
+.seccio-targeta[data-accent="lila"] .select-formulari:focus {
+    border-color: rgba(179, 136, 255, 0.35);
+    box-shadow: 0 0 0 3px rgba(179, 136, 255, 0.08), 0 0 16px rgba(179, 136, 255, 0.04);
+}
+
+.input-formulari::placeholder {
+    color: #4a6a80;
+    font-size: var(--mida-petita);
+}
+
+.input-formulari.error {
+    border-color: var(--color-accent-vermell);
+    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+}
+
+.input-formulari.exit {
+    border-color: rgba(0, 230, 118, 0.35);
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.06);
+    animation: camp-validat 0.3s ease;
+}
+
+@keyframes camp-validat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+.select-formulari option {
+    background: var(--color-fons-secundari);
+    color: var(--color-text);
+}
+
+.camp-error {
+    display: none;
+    margin-top: 4px;
+    padding: 3px 8px;
+    border-left: 2px solid var(--color-accent-vermell);
+    border-radius: 4px;
+    background: rgba(255, 68, 68, 0.08);
+    color: #ff7d7d;
+    font-size: var(--mida-xs);
+}
+
+.camp-error.actiu {
+    display: block;
+    animation: apareix 0.2s ease;
+}
+
+/* ============================================
+   RANGS
+   ============================================ */
+.grid-rangs-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.rang-grup {
+    display: flex;
+    flex-direction: column;
+}
+
+.rang-camps {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.rang-text {
+    font-size: var(--mida-xs);
+    color: #5a7a90;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.rang-unitat {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: rgba(0, 230, 118, 0.1);
+    border: 1px solid rgba(0, 230, 118, 0.15);
+    color: #00e676;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.input-rang {
+    width: 68px !important;
+    text-align: center;
+    padding: 7px 4px !important;
+    font-size: var(--mida-petita) !important;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.camp-ajuda {
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: #7a9ab0;
+    font-weight: 500;
+}
+
+.alergies-altres {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.alergies-altres .input-formulari {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* ============================================
+   PRESSIÓ ARTERIAL
+   ============================================ */
+.grid-pressio-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.pressio-camp {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pressio-input-fila {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pressio-input-fila .input-formulari {
+    text-align: center;
+    font-size: var(--mida-petita);
+    font-weight: 700;
+    padding: 7px 4px;
+}
+
+.pressio-unitat {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(255, 82, 82, 0.1);
+    border: 1px solid rgba(255, 82, 82, 0.15);
+    color: #ff5252;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.pressio-barra {
+    position: relative;
+    height: 6px;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.pressio-barra::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 6px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+}
+
+.pressio-barra.normal::after {
+    width: 100%;
+    background: linear-gradient(90deg, #00c853, #00e676);
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.2);
+}
+
+.pressio-barra.alta::after {
+    width: 100%;
+    background: linear-gradient(90deg, #d32f2f, #ff5252);
+    box-shadow: 0 0 8px rgba(255, 82, 82, 0.2);
+}
+
+.pressio-barra.baixa::after {
+    width: 100%;
+    background: linear-gradient(90deg, #f9a825, #f0c040);
+    box-shadow: 0 0 8px rgba(240, 192, 64, 0.2);
+}
+
+/* ============================================
+   CONDICIONS DE SALUT
+   ============================================ */
+.condicions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.condicio-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 9px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: rgba(10, 27, 42, 0.52);
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    user-select: none;
+}
+
+.condicio-item:hover {
+    border-color: rgba(0, 200, 232, 0.3);
+    background: rgba(0, 200, 232, 0.08);
+}
+
+.condicio-item.seleccionat {
+    border-color: var(--color-primari);
+    background: rgba(0, 200, 232, 0.13);
+}
+
+.condicio-item input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.condicio-label {
+    flex: 1;
+    font-size: var(--mida-petita);
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.condicio-item.seleccionat .condicio-label {
+    color: #c9f3ff;
+    font-weight: 600;
+}
+
+/* ============================================
+   ACTIVITAT FÍSICA
+   ============================================ */
+.activitat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.activitat-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: rgba(10, 27, 42, 0.52);
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    user-select: none;
+}
+
+.activitat-item:hover {
+    border-color: rgba(0, 230, 118, 0.32);
+    background: rgba(0, 230, 118, 0.07);
+}
+
+.activitat-item.seleccionat {
+    border-color: var(--color-accent-verd);
+    background: rgba(0, 230, 118, 0.11);
+}
+
+.activitat-item input[type="radio"] {
+    margin-top: 3px;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    accent-color: var(--color-accent-verd);
+}
+
+.activitat-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.activitat-nom {
+    font-size: var(--mida-petita);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #d6edf8;
+}
+
+.activitat-item.seleccionat .activitat-nom {
+    color: #b6ffd8;
+}
+
+.activitat-desc {
+    font-size: var(--mida-xs);
+    line-height: 1.3;
+    color: var(--color-text-secundari);
+}
+
+/* ============================================
+   HÀBITS DE VIDA
+   ============================================ */
+.habits-fila {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 20px;
+}
+
+.habit-fitxa {
+    background: rgba(5, 16, 28, 0.55);
+    border: 1px solid rgba(179, 136, 255, 0.12);
+    border-radius: 14px;
+    padding: 14px 14px 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.habit-fitxa:hover,
+.habit-fitxa:focus-within {
+    border-color: rgba(179, 136, 255, 0.35);
+    box-shadow: 0 0 16px rgba(179, 136, 255, 0.08);
+}
+
+.habit-fitxa--ample {
+    grid-column: 1 / -1;
+}
+
+.habit-opcions--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.habit-opcions--2x2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.habit-opcions--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.habit-grup--ample {
+    grid-column: auto;
+    width: 100%;
+}
+
+.habit-opcio--check input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+}
+
+.habit-grup {
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.habit-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--mida-petita);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9fb9cb;
+}
+
+.habit-opcions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.habit-opcio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: rgba(10, 27, 42, 0.52);
+    color: var(--color-text);
+    font-size: var(--mida-petita);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transicio-rapida);
+    user-select: none;
+}
+
+.habit-opcio:hover {
+    border-color: rgba(0, 200, 232, 0.32);
+    background: rgba(0, 200, 232, 0.08);
+}
+
+.habit-opcio.seleccionat {
+    border-color: var(--color-primari);
+    background: rgba(0, 200, 232, 0.14);
+    color: #c9f3ff;
+}
+
+.habit-opcio input[type="radio"] {
+    width: 13px;
+    height: 13px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+    .grid-rangs-2x2,
+    .grid-pressio-3,
+    .condicions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habits-fila {
+        gap: 28px;
+    }
+
+    .habits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 16px;
+    }
+
+    .habit-fitxa--ample {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .camp-fila-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .rang-camps {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+
+    .input-rang {
+        width: 78px !important;
+    }
+
+    .habits-fila {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .habits-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .habit-fitxa--ample {
+        grid-column: auto;
+    }
+
+    .habit-grup {
+        min-width: 0;
+    }
+
+    .habit-opcions--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
