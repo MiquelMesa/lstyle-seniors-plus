@@ -570,3 +570,41 @@ window.app = {
     mostrarToast,
     dadesApp
 };
+
+
+// LÒGICA AREA (a): DISCLAIMER I SLIDESHOW
+document.addEventListener('DOMContentLoaded', () => {
+    const btnStart = document.getElementById('btn-start-app');
+    const chkAccept = document.getElementById('accept-disclaimer');
+    const areaDisclaimer = document.getElementById('area-disclaimer');
+    
+    // 1. Validació del botó d'inici
+    if (chkAccept && btnStart) {
+        chkAccept.addEventListener('change', () => {
+            btnStart.disabled = !chkAccept.checked;
+        });
+        
+        btnStart.addEventListener('click', () => {
+            // Transició a la següent fase (Càrrega de dades)
+            areaDisclaimer.style.display = 'none';
+            // Aquí cridarem a la funció de càrrega que ja existeixi a app.js
+            if (typeof carregarDadesInicials === 'function') {
+                carregarDadesInicials();
+            } else if (typeof carregarDades === 'function') {
+                carregarDades();
+            }
+        });
+    }
+
+    // 2. Control de l'animació del slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.intro-slideshow .slide');
+    
+    if (slides.length > 0) {
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000); // Canvi cada 4 segons
+    }
+});

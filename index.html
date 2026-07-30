@@ -38,9 +38,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
 
+    <link rel="stylesheet" href="css/disclaimer.css">
 </head>
 
 <body>
+
+    <!-- AREA (a): DISCLAIMER I ANIMACIÓ D'INTRODUCCIÓ -->
+    <section id="area-disclaimer">
+        <div class="disclaimer-brand">
+            <h1>LStyle Seniors Plus</h1>
+            <p class="tagline">Ciència i vitalitat per a la generació universitària</p>
+        </div>
+
+        <div id="intro-animation" class="intro-slideshow">
+            <div class="slide active">
+                <img src="idees per video/elderly-couple-fooling-around-park.jpg" alt="Vida activa">
+                <div class="slide-caption"><h3>Benvinguts a l'etapa per gaudir de la vida al màxim</h3></div>
+            </div>
+            <div class="slide">
+                <img src="idees per video/cheerful-mature-loving-couple-family-using-laptop-cooking.jpg" alt="Tecnologia i salut">
+                <div class="slide-caption"><h3>La tecnologia i la ciència al servei de la teva salut</h3></div>
+            </div>
+            <div class="slide">
+                <img src="idees per video/istockphoto-1267691155-1024x1024.jpg" alt="Càlculs">
+                <div class="slide-caption"><h3>Anàlisi personalitzada: dades, càlculs i consells</h3></div>
+            </div>
+            <div class="slide">
+                <img src="idees per video/istockphoto-1369318416-1024x1024.jpg" alt="IA">
+                <div class="slide-caption"><h3>Una IA generarà la teva dieta i llista de la compra</h3></div>
+            </div>
+        </div>
+
+        <div class="disclaimer-content">
+            <div class="alert-info">
+                <h4>Informació important sobre les teves dades</h4>
+                <p>Les dades personals i de salut que introduiràs s'utilitzaran exclusivament per realitzar els càlculs nutricionals i generar la teva dieta personalitzada.</p>
+                <p><strong>Privadesa:</strong> Cap d'aquestes dades serà emmagatzemada en servidors externs ni compartida amb tercers.</p>
+                <div class="sources-list">
+                    <small>Fonts: Organització Mundial de la Salut (OMS) i Guies Nutricionals de la Generalitat de Catalunya.</small>
+                </div>
+            </div>
+
+            <div class="disclaimer-action">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="accept-disclaimer">
+                    He entès que aquesta informació no substitueix la consulta mèdica.
+                </label><br>
+                <button id="btn-start-app" class="btn-primary" disabled>Iniciar presa de dades</button>
+                <p class="medical-warning">En cas de patologia greu, consulteu sempre un professional de la salut.</p>
+            </div>
+        </div>
+    </section>
+
 
     <!-- ============================================
          BOTÓ PANTALLA COMPLETA
