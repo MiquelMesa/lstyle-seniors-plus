@@ -608,3 +608,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000); // Canvi cada 4 segons
     }
 });
+
+
+// --- GESTIÓ AREA (a) DISCLAIMER ---
+document.addEventListener('DOMContentLoaded', () => {
+    const chk = document.getElementById('chk-accept');
+    const btn = document.getElementById('btn-init');
+    const area = document.getElementById('area-disclaimer');
+
+    if (chk && btn) {
+        chk.addEventListener('change', () => { btn.disabled = !chk.checked; });
+        btn.addEventListener('click', () => {
+            // Hide disclaimer with a smooth transition
+            area.style.transition = 'opacity 0.6s ease';
+            area.style.opacity = '0';
+            setTimeout(() => {
+                area.style.display = 'none';
+                // Trigger the Loading UI (Area b)
+                if (window.carregarDadesInici) window.carregarDadesInici();
+            }, 600);
+        });
+    }
+});

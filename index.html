@@ -43,52 +43,42 @@
 
 <body>
 
-    <!-- AREA (a): DISCLAIMER I ANIMACIÓ D'INTRODUCCIÓ -->
-    <section id="area-disclaimer">
-        <div class="disclaimer-brand">
-            <h1>LStyle Seniors Plus</h1>
-            <p class="tagline">Ciència i vitalitat per a la generació universitària</p>
+    <!-- AREA (a): DISCLAIMER DE BENVINGUDA -->
+    <section id="area-disclaimer" class="active-section" style="background: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 2rem;">
+        <div class="brand-header" style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="font-size: 2.8rem; color: #1a1a1a; margin-bottom: 0.5rem;">LStyle Seniors Plus</h1>
+            <p style="font-style: italic; color: #666; font-size: 1.2rem;">Expertise en nutrició i estil de vida actiu</p>
         </div>
 
-        <div id="intro-animation" class="intro-slideshow">
-            <div class="slide active">
-                <img src="idees per video/elderly-couple-fooling-around-park.jpg" alt="Vida activa">
-                <div class="slide-caption"><h3>Benvinguts a l'etapa per gaudir de la vida al màxim</h3></div>
+        <div class="video-container" style="width: 100%; max-width: 960px; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative;">
+            <!-- Placeholder for the video we are "generating" -->
+            <div id="video-overlay" style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); color: white; text-align: center; z-index: 2;">
+                <p style="font-size: 1.5rem; font-weight: 300;">[ Animació: Vitalitat · Ciència · Nutrició ]</p>
             </div>
-            <div class="slide">
-                <img src="idees per video/cheerful-mature-loving-couple-family-using-laptop-cooking.jpg" alt="Tecnologia i salut">
-                <div class="slide-caption"><h3>La tecnologia i la ciència al servei de la teva salut</h3></div>
-            </div>
-            <div class="slide">
-                <img src="idees per video/istockphoto-1267691155-1024x1024.jpg" alt="Càlculs">
-                <div class="slide-caption"><h3>Anàlisi personalitzada: dades, càlculs i consells</h3></div>
-            </div>
-            <div class="slide">
-                <img src="idees per video/istockphoto-1369318416-1024x1024.jpg" alt="IA">
-                <div class="slide-caption"><h3>Una IA generarà la teva dieta i llista de la compra</h3></div>
-            </div>
+            <!-- Temporal visual using the best generated image as poster -->
+            <img src="https://v3b.fal.media/files/b/0aa45fe2/_XEM1GhgGQwDgJMGE8EWK_KSmpl1dQ.png" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8);" />
         </div>
 
-        <div class="disclaimer-content">
-            <div class="alert-info">
-                <h4>Informació important sobre les teves dades</h4>
-                <p>Les dades personals i de salut que introduiràs s'utilitzaran exclusivament per realitzar els càlculs nutricionals i generar la teva dieta personalitzada.</p>
-                <p><strong>Privadesa:</strong> Cap d'aquestes dades serà emmagatzemada en servidors externs ni compartida amb tercers.</p>
-                <div class="sources-list">
-                    <small>Fonts: Organització Mundial de la Salut (OMS) i Guies Nutricionals de la Generalitat de Catalunya.</small>
-                </div>
+        <div class="legal-disclaimer" style="max-width: 800px; margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
+            <h4 style="color: #c0392b; margin-bottom: 1rem;">Protocol Informatiu i de Privadesa</h4>
+            <p style="color: #444; line-height: 1.6; margin-bottom: 1rem;">
+                Aquest sistema analitza la teva alçada, pes, pressió arterial i historial de salut per generar consells basats en fonts mèdiques oficials (OMS, Generalitat de Catalunya). Les dades s'utilitzen exclusivament per al càlcul en temps real i no s'emmagatzemen en cap base de dades externa.
+            </p>
+            <div style="margin-top: 2rem;">
+                <label style="cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 1.1rem; color: #2c3e50;">
+                    <input type="checkbox" id="chk-accept" style="width: 20px; height: 20px;">
+                    He entès que aquesta informació no substitueix cap diagnòstic mèdic.
+                </label>
             </div>
-
-            <div class="disclaimer-action">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="accept-disclaimer">
-                    He entès que aquesta informació no substitueix la consulta mèdica.
-                </label><br>
-                <button id="btn-start-app" class="btn-primary" disabled>Iniciar presa de dades</button>
-                <p class="medical-warning">En cas de patologia greu, consulteu sempre un professional de la salut.</p>
-            </div>
+            <button id="btn-init" disabled style="margin-top: 2rem; padding: 15px 40px; font-size: 1.2rem; border-radius: 30px; border: none; background: #27ae60; color: white; cursor: pointer; transition: all 0.3s ease;">
+                Iniciar presa de dades
+            </button>
         </div>
     </section>
+
+
+    <!-- AREA (a): DISCLAIMER I ANIMACIÓ D'INTRODUCCIÓ -->
+    
 
 
     <!-- ============================================
