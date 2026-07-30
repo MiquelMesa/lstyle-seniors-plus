@@ -8,7 +8,7 @@
 
 const API_CONFIG = {
     // URL base de l'API (carpeta endpoints al VPS)
-    BASE_URL: 'https://michaelprojects.org/lstyle-seniors-plus/api/endpoints',
+    BASE_URL: 'https://michaelprojects.org/lstyle-seniors-plus/Backend/endpoints',
     
     // API Key per autenticació (coincideix amb middleware/auth.php)
     API_KEY: 'IYHb6wN3G6Pzf4MH8IDr58e4e4dQrcg8xTDoazZK52717e61',
