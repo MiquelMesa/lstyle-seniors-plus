@@ -38,48 +38,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
 
-    <link rel="stylesheet" href="css/disclaimer.css">
 </head>
 
 <body>
-
-    <!-- AREA (a): DISCLAIMER DE BENVINGUDA -->
-    <section id="area-disclaimer" class="active-section" style="background: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 2rem;">
-        <div class="brand-header" style="text-align: center; margin-bottom: 2rem;">
-            <h1 style="font-size: 2.8rem; color: #1a1a1a; margin-bottom: 0.5rem;">LStyle Seniors Plus</h1>
-            <p style="font-style: italic; color: #666; font-size: 1.2rem;">Expertise en nutrició i estil de vida actiu</p>
-        </div>
-
-        <div class="video-container" style="width: 100%; max-width: 960px; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative;">
-            <!-- Placeholder for the video we are "generating" -->
-            <div id="video-overlay" style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); color: white; text-align: center; z-index: 2;">
-                <p style="font-size: 1.5rem; font-weight: 300;">[ Animació: Vitalitat · Ciència · Nutrició ]</p>
-            </div>
-            <!-- Temporal visual using the best generated image as poster -->
-            <img src="https://v3b.fal.media/files/b/0aa45fe2/_XEM1GhgGQwDgJMGE8EWK_KSmpl1dQ.png" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8);" />
-        </div>
-
-        <div class="legal-disclaimer" style="max-width: 800px; margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
-            <h4 style="color: #c0392b; margin-bottom: 1rem;">Protocol Informatiu i de Privadesa</h4>
-            <p style="color: #444; line-height: 1.6; margin-bottom: 1rem;">
-                Aquest sistema analitza la teva alçada, pes, pressió arterial i historial de salut per generar consells basats en fonts mèdiques oficials (OMS, Generalitat de Catalunya). Les dades s'utilitzen exclusivament per al càlcul en temps real i no s'emmagatzemen en cap base de dades externa.
-            </p>
-            <div style="margin-top: 2rem;">
-                <label style="cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 1.1rem; color: #2c3e50;">
-                    <input type="checkbox" id="chk-accept" style="width: 20px; height: 20px;">
-                    He entès que aquesta informació no substitueix cap diagnòstic mèdic.
-                </label>
-            </div>
-            <button id="btn-init" disabled style="margin-top: 2rem; padding: 15px 40px; font-size: 1.2rem; border-radius: 30px; border: none; background: #27ae60; color: white; cursor: pointer; transition: all 0.3s ease;">
-                Iniciar presa de dades
-            </button>
-        </div>
-    </section>
-
-
-    <!-- AREA (a): DISCLAIMER I ANIMACIÓ D'INTRODUCCIÓ -->
-    
-
 
     <!-- ============================================
          BOTÓ PANTALLA COMPLETA
@@ -226,8 +187,8 @@
                 </div>
                 <div class="targeta-contingut">
                     <h3>Nutrició Intel·ligent</h3>
-                    <p class="targeta-subtitol">Dieta del Plat · Motor local · Estacionalitat</p>
-                    <p>El sistema genera un pla alimentari de 2 setmanes (dilluns–diumenge) basat en la Dieta del Plat, amb aliments de temporada i adaptat a les condicions de salut, al·lèrgies i intoleràncies. Inclou 5 àpats diaris i una llista de la compra.</p>
+                    <p class="targeta-subtitol">Dieta del Plat · IA · Estacionalitat</p>
+                    <p>El sistema genera dietes setmanals personalitzades basades en la Dieta del Plat, amb aliments de temporada i adaptades a les condicions de salut de cada persona. S'utilitza intel·ligència artificial per crear menús equilibrats amb 5 àpats diaris.</p>
                 </div>
             </div>
 
@@ -777,7 +738,7 @@
                             <span class="habit-etiqueta">
                                 <i data-lucide="alert-triangle" class="lucide-14"></i>
                                 Al·lèrgies alimentàries
-                                <span class="tooltip-icona" data-tooltip="Les al·lèrgies són diferents de les intoleràncies: exclouen completament els aliments del menú de 2 setmanes. Si tens dubtes, consulta el teu metge.">ℹ️</span>
+                                <span class="tooltip-icona" data-tooltip="Les al·lèrgies són diferents de les intoleràncies: exclouen completament els aliments del menú quinzenal. Si tens dubtes, consulta el teu metge.">ℹ️</span>
                             </span>
                             <div class="habit-opcions habit-opcions--4">
                                 <label class="habit-opcio habit-opcio--check">
@@ -819,7 +780,7 @@
                                     maxlength="200"
                                     autocomplete="off"
                                 >
-                                <div class="camp-ajuda">Separa amb comes. Aquests aliments s'exclouran del menú de 2 setmanes.</div>
+                                <div class="camp-ajuda">Separa amb comes. Aquests aliments s'exclouran del menú quinzenal.</div>
                             </div>
                         </div>
                         </div>
@@ -951,20 +912,11 @@
                 </div>
             </div>
             
-            <!-- Menú de 2 setmanes -->
+            <!-- Menú quinzenal -->
             <div class="resultat-seccio resultat-seccio--centrada">
-                <h3>Menú de 2 Setmanes Personalitzat</h3>
-                <p class="resultat-subtitol">Pla de 14 dies (Dl–Dg) · Dades introduïdes una sola vegada · Basat en la Dieta del Plat</p>
+                <h3>Menú Quinzenal Personalitzat</h3>
+                <p class="resultat-subtitol">Pla de 2 setmanes (14 dies, Dl–Dg) · Dades introduïdes una sola vegada · Basat en la Dieta del Plat</p>
                 <div id="menu-setmanal-contingut" class="menu-setmanal-contingut">
-                    <!-- Es generarà dinàmicament -->
-                </div>
-            </div>
-
-            <!-- Telèfons d'emergència -->
-            <div class="resultat-seccio resultat-seccio--centrada" id="seccio-telefonos">
-                <h3>Telèfons d'Emergència i Ajuda</h3>
-                <p class="resultat-subtitol">Números útils a Catalunya · Guarda'ls o truca quan calgui</p>
-                <div id="resultats-telefonos" class="telefonos-grid">
                     <!-- Es generarà dinàmicament -->
                 </div>
             </div>
