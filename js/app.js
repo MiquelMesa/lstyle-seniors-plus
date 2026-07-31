@@ -23,9 +23,11 @@ let dadesApp = {
     config:             null
 };
 
+
 // ============================================
 // INICIALITZACIÓ
 // ============================================
+
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Iniciant LSTYLE-SENIORS-PLUS...');
 
@@ -41,9 +43,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         inicialitzarTooltips();
 
         // 4. Mostrar disclaimer (les dades es carreguen en clicar Continuar)
-        setTimeout(() => {
-            ocultarPantallaInici();
-            mostrarPantalla('pantalla-disclaimer');
+        setTimeout(() =>
+        {
+        ocultarPantallaInici();
+ 
+        // El video de benvinguda ja gestiona la transicio
+        // Si no hi ha video, mostrar disclaimer
+ 
+        if (!document.getElementById('pantalla-video'))
+        {
+        mostrarPantalla('pantalla-disclaimer');
+        }
+        
         }, 1500);
 
         // 5. Inicialitzar disclaimer

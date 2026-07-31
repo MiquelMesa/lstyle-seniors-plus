@@ -1,0 +1,318 @@
+/* ============================================
+ PANTALLA VIDEO - ESTILS
+ ============================================
+ Video animat amb transicions suaus entre
+ escenes. Disseny cinematic i elegant.
+
+ Variables CSS (ja definides a estils.css):
+ --color-fons: #0a0e1a
+ --color-text: #e8ecf1
+ --color-accent: #00c8e8
+ --color-accent-2: #00e676
+ ============================================ */
+
+/* Contenidor principal de la pantalla video */
+.pantalla-video {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100vh;
+ height: 100dvh; /* Suport per a mobil */
+ background: var(--color-fons, #0a0e1a);
+ z-index: 1000;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ align-items: center;
+}
+
+/* ============================================
+ CONTENIDOR DEL VIDEO (ESCENES)
+ ============================================ */
+.video-contenidor {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 1;
+}
+
+/* Cada escena es una imatge de fons */
+.escena-video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ opacity: 0;
+ transition: opacity 1.2s ease-in-out;
+ z-index: 1;
+}
+
+/* Escena activa (visible) */
+.escena-video.escena-activa {
+ opacity: 1;
+ z-index: 2;
+}
+
+/* Capa fosca per sobre de la imatge per millorar legibilitat */
+.escena-overlay {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(
+ to bottom,
+ rgba(10, 14, 26, 0.3) 0%,
+ rgba(10, 14, 26, 0.1) 40%,
+ rgba(10, 14, 26, 0.6) 70%,
+ rgba(10, 14, 26, 0.95) 100%
+ );
+ z-index: 2;
+}
+
+/* ============================================
+ TEXT DE CADA ESCENA
+ ============================================ */
+.escena-text {
+ position: absolute;
+ bottom: 25%;
+ left: 50%;
+ transform: translateX(-50%) translateY(20px);
+ text-align: center;
+ z-index: 3;
+ opacity: 0;
+ transition: all 0.8s ease-out;
+ width: 90%;
+ max-width: 800px;
+}
+
+/* Text visible quan l'escena esta activa */
+.escena-activa .escena-text {
+ opacity: 1;
+ transform: translateX(-50%) translateY(0);
+}
+
+/* Titol de l'escena */
+.escena-titol {
+ font-size: clamp(2rem, 5vw, 3.5rem);
+ font-weight: 700;
+ color: #ffffff;
+ text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+ margin-bottom: 0.5rem;
+ letter-spacing: -0.02em;
+ line-height: 1.2;
+}
+
+/* Subtitol de l'escena */
+.escena-subtitol {
+ font-size: clamp(1rem, 2.5vw, 1.5rem);
+ font-weight: 400;
+ color: var(--color-accent, #00c8e8);
+ text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+ opacity: 0.9;
+}
+
+/* ============================================
+ INDICADORS DE PROGRES (PUNTETS)
+ ============================================ */
+.video-indicadors {
+ position: absolute;
+ bottom: 120px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 12px;
+ z-index: 10;
+}
+
+.indicador {
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.4);
+ cursor: pointer;
+ transition: all 0.3s ease;
+ border: 2px solid transparent;
+}
+
+.indicador:hover {
+ background: rgba(255, 255, 255, 0.7);
+ transform: scale(1.2);
+}
+
+.indicador-actiu {
+ background: var(--color-accent, #00c8e8);
+ width: 30px;
+ border-radius: 5px;
+ border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+ CONTROLS (BOTONS)
+ ============================================ */
+.video-controls {
+ position: absolute;
+ bottom: 40px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ gap: 20px;
+ z-index: 10;
+ width: 90%;
+ max-width: 500px;
+ justify-content: center;
+}
+
+/* Estil base per als botons del video */
+.btn-video {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ padding: 14px 28px;
+ border-radius: 12px;
+ font-size: 1rem;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ border: none;
+ outline: none;
+ font-family: inherit;
+ min-width: 180px;
+}
+
+/* Icona dins el boto */
+.btn-video i {
+ width: 20px;
+ height: 20px;
+}
+
+/* Boto Repetir */
+.btn-repetir {
+ background: rgba(255, 255, 255, 0.1);
+ color: #ffffff;
+ border: 2px solid rgba(255, 255, 255, 0.3);
+ backdrop-filter: blur(10px);
+}
+
+.btn-repetir:hover {
+ background: rgba(255, 255, 255, 0.2);
+ border-color: rgba(255, 255, 255, 0.5);
+ transform: translateY(-2px);
+}
+
+/* Boto Seguir (accent) */
+.btn-seguir {
+ background: linear-gradient(135deg, var(--color-accent, #00c8e8), var(--color-accent-2, #00e676));
+ color: #0a0e1a;
+ box-shadow: 0 4px 15px rgba(0, 200, 232, 0.3);
+}
+
+.btn-seguir:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 6px 20px rgba(0, 200, 232, 0.4);
+}
+
+/* Boto Skip (cantó superior dret) */
+.btn-skip {
+ position: absolute;
+ top: 20px;
+ right: 20px;
+ background: rgba(255, 255, 255, 0.1);
+ border: 1px solid rgba(255, 255, 255, 0.2);
+ color: #ffffff;
+ padding: 10px;
+ border-radius: 50%;
+ cursor: pointer;
+ z-index: 10;
+ transition: all 0.3s ease;
+ backdrop-filter: blur(10px);
+ width: 44px;
+ height: 44px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.btn-skip:hover {
+ background: rgba(255, 255, 255, 0.2);
+ transform: scale(1.1);
+}
+
+.btn-skip i {
+ width: 20px;
+ height: 20px;
+}
+
+/* ============================================
+ ANIMACIONS
+ ============================================ */
+@keyframes fadeInEscena {
+ from {
+ opacity: 0;
+ transform: scale(1.05);
+ }
+ to {
+ opacity: 1;
+ transform: scale(1);
+ }
+}
+
+.escena-activa {
+ animation: fadeInEscena 1.5s ease-out;
+}
+
+/* ============================================
+ RESPONSIVE (MOBIL)
+ ============================================ */
+@media (max-width: 768px) {
+ .escena-text {
+ bottom: 30%;
+ }
+
+ .escena-titol {
+ font-size: 1.8rem;
+ }
+
+ .escena-subtitol {
+ font-size: 1rem;
+ }
+
+ .video-controls {
+ flex-direction: column;
+ gap: 12px;
+ bottom: 30px;
+ }
+
+ .btn-video {
+ width: 100%;
+ padding: 12px 20px;
+ }
+
+ .video-indicadors {
+ bottom: 160px;
+ }
+}
+
+/* ============================================
+ ACCESIBILITAT (REDUCED MOTION)
+ ============================================ */
+@media (prefers-reduced-motion: reduce) {
+ .escena-video {
+ transition: none;
+ }
+
+ .escena-text {
+ transition: none;
+ opacity: 1;
+ transform: translateX(-50%) translateY(0);
+ }
+}

@@ -621,3 +621,8 @@ input[type="radio"] {
         --espai-lg: 20px;
     }
 }
+
+
+.pantalla.ocult {
+ display: none !important;
+}
