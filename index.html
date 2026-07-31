@@ -46,7 +46,6 @@
 
 <body>
 
-    
     <!-- 
     
         ================================================
@@ -70,104 +69,122 @@
         </button>
     </div>
 
-           
     <!-- 
+
+    ================================
+    PANTALLA 1: VIDEO DE BENVINGUDA
+    =================================
+
+    Aquesta pantalla mostra un video animat amb
+    transicions suaus entre imatges de seniors
+    actius. Es la primera impressio de l'app.
+
+    Caracteristiques:
+
+    - 5 escenes de 4 segons cadascuna
+    - Transicions en fons (fade)
+    - Controls: Repetir / Seguir
+
+    -->
     
-        ================================
-        PANTALLA 1: VIDEO DE BENVINGUDA
-        =================================
 
-        Aquesta pantalla mostra un video animat amb
-        transicions suaus entre imatges de seniors
-        actius. Es la primera impressio de l'app.
-
-        Caracteristiques:
- 
-        - 5 escenes de 4 segons cadascuna
-        - Transicions en fondu (fade)
-        - Textos en catala amb animacio
-        - Controls: Repetir / Seguir
- 
-    -->
-
-        <section id="pantalla-video" class="pantalla pantalla-video">
- 
-    <!--
-
-        CONTENIDOR DEL VIDEO AMB IMATGES DE FONS
-        Cada imatge representa una escena del video
-        Les imatges es mostren amb transicions suaus
- 
-    -->
- 
+    <section id="pantalla-video" class="pantalla pantalla-video">
     <div class="video-contenidor" id="video-contenidor">
- 
-        <!-- Escena 1: Parella activa (viatge) -->
-        <div class="escena-video escena-activa" data-index="0"
-        style="background-image: url('https://v3b.fal.media/files/b/0aa4710f/Jj3n5UTrkIBHeT6sEnQhs_GTbd4OcQ.png')">
-        <div class="escena-overlay"></div>
-        <div class="escena-text">
-        <h2 class="escena-titol">Estil de vida saludable</h2>
-        <p class="escena-subtitol">Per a seniors universitaris actius</p>
-        </div>
-        </div>
-
-        <!-- Escena 2: Cuinant junts (nutricio) -->
-        <div class="escena-video" data-index="1"
-        style="background-image: url('https://v3b.fal.media/files/b/0aa470ff/UIxNd5QqC-kq7Z7L0N9-k_BF7P8sxI.png')">
-        <div class="escena-overlay"></div>
-        <div class="escena-text">
-        <h2 class="escena-titol">Nutricio intel·ligent</h2>
-        <p class="escena-subtitol">Dietes personalitzades amb IA</p>
-        </div>
-        </div>
-
-        <!-- Escena 3: Tai chi (exercici) -->
-        <div class="escena-video" data-index="2"
-        style="background-image: url('https://v3b.fal.media/files/b/0aa47100/lGCS4fR_kBSA74vygCNxv_hwaQHJZd.png')">
-        <div class="escena-overlay"></div>
-        <div class="escena-text">
-        <h2 class="escena-titol">Envelleix saludablement</h2>
-        <p class="escena-subtitol">Activitat fisica i benestar mental</p>
-        </div>
-        </div>
-
-        <!-- Escena 4: Art i creativitat -->
-        <div class="escena-video" data-index="3"
-        style="background-image: url('https://v3b.fal.media/files/b/0aa47101/_xyj0ogyP2G7JbJn3MiW2_6Weh8uaQ.png')">
-        <div class="escena-overlay"></div>
-        <div class="escena-text">
-        <h2 class="escena-titol">Actius i formats</h2>
-        <p class="escena-subtitol">Socialitzacio i aprenentatge continu</p>
-        </div>
-        </div>
-
-        <!-- Escena 5: Tecnologia i connexio -->
-        <div class="escena-video" data-index="4"
-        style="background-image: url('https://v3b.fal.media/files/b/0aa47102/YIjdf4kczm6eSyI_KEfIp_fosc9xrP.png')">
-        <div class="escena-overlay"></div>
-        <div class="escena-text">
-        <h2 class="escena-titol">LStyle Seniors Plus</h2>
-        <p class="escena-subtitol">La teva salut, el teu estil</p>
-        </div>
-        </div>
-        
+    
+    <!-- Escena 1: Parella activa -->
+    <div class="escena-video escena-activa" data-index="0"
+    style="background-image: url('https://v3b.fal.media/files/b/0aa47ef1/Eq4ho3XLfF5pOSU9tIveS_tWrdyaXz.png')">
+    <div class="escena-overlay"></div>
+    <div class="escena-text">
+    <h2 class="escena-titol">Estil de vida saludable</h2>
+    <p class="escena-subtitol">Per a seniors universitaris actius</p>
+    </div>
     </div>
 
-     <!--
+    <!-- Escena 2: Cuinant junts -->
+    <div class="escena-video" data-index="1"
+    style="background-image: url('https://v3b.fal.media/files/b/0aa47f02/r2rBrM72HbDLRi4BEoE8j_u4iYknWF.png')">
+    <div class="escena-overlay"></div>
+    <div class="escena-text">
+    <h2 class="escena-titol">Nutrició intel·ligent</h2>
+    <p class="escena-subtitol">Dietes personalitzades amb IA</p>
+    </div>
+    </div>
+
+    <!-- Escena 3: Tai chi -->
+    <div class="escena-video" data-index="2"
+    style="background-image: url('https://v3b.fal.media/files/b/0aa47ef2/XcQkNaJKReN6OU3zSo-3D_vHqLKeYS.png')">
+    <div class="escena-overlay"></div>
+    <div class="escena-text">
+    <h2 class="escena-titol">Envelleix saludablement</h2>
+    <p class="escena-subtitol">Activitat física i benestar mental</p>
+    </div>
+    </div>
+
+    <!-- Escena 4: Art i creativitat -->
+    <div class="escena-video" data-index="3"
+    style="background-image: url('https://v3b.fal.media/files/b/0aa47f03/9C88QUbHJlHw6xeQlmgpp_PSDq4KU3.png')">
+    <div class="escena-overlay"></div>
+    <div class="escena-text">
+    <h2 class="escena-titol">Actius i formats</h2>
+    <p class="escena-subtitol">Socialització i aprenentatge continu</p>
+    </div>
+    </div>
+
+    <!-- Escena 5: Tecnologia i estil -->
+    <div class="escena-video" data-index="4"
+    style="background-image: url('https://v3b.fal.media/files/b/0aa47ef4/BJj6IIr5Wl9cBONEzyO9v_LS2b7UcI.png')">
+    <div class="escena-overlay"></div>
+    <div class="escena-text">
+    <h2 class="escena-titol">LStyle Seniors Plus</h2>
+    <p class="escena-subtitol">La teva salut, el teu estil</p>
+    </div>
+    </div>
+    </div>
+
+    <!-- Indicadors de progrés -->
+    <div class="video-indicadors" id="video-indicadors">
+    <span class="indicador indicador-actiu" data-index="0"></span>
+    <span class="indicador" data-index="1"></span>
+    <span class="indicador" data-index="2"></span>
+    <span class="indicador" data-index="3"></span>
+    <span class="indicador" data-index="4"></span>
+    </div>
+
+    <!-- Botons de control -->
+    <div class="video-controls">
+    <button id="btn-repetir-video" class="btn-video btn-repetir" type="button">
+    <i data-lucide="refresh-cw"></i>
+    <span>Repetir vídeo</span>
+    </button>
+
+    <button id="btn-seguir-app" class="btn-video btn-seguir" type="button">
+    <span>Seguir amb l'aplicació</span>
+    <i data-lucide="arrow-right"></i>
+    </button>
+    </div>
+
+    <!-- Botó saltar -->
+    <button id="btn-skip-video" class="btn-skip" type="button" title="Saltar vídeo">
+    <i data-lucide="skip-forward"></i>
+    </button>
+    </section>
+
+
+    <!--
 
     INDICADORS DE PROGRES (PUNTETS)
     Mostren quina escena esta activa
     
     -->
- 
-        <div class="video-indicadors" id="video-indicadors">
-        <span class="indicador indicador-actiu" data-index="0"></span>
-        <span class="indicador" data-index="1"></span>
-        <span class="indicador" data-index="2"></span>
-        <span class="indicador" data-index="3"></span>
-        <span class="indicador" data-index="4"></span>
-        </div>
+
+    <div class="video-indicadors" id="video-indicadors">
+    <span class="indicador indicador-actiu" data-index="0"></span>
+    <span class="indicador" data-index="1"></span>
+    <span class="indicador" data-index="2"></span>
+    <span class="indicador" data-index="3"></span>
+    <span class="indicador" data-index="4"></span>
+    </div>
 
     <!--
 
@@ -175,31 +192,34 @@
     Botons per repetir o continuar amb l'aplicacio
     
     -->
- 
-        <div class="video-controls">
-        <button id="btn-repetir-video" class="btn-video btn-repetir" type="button">
-        <i data-lucide="refresh-cw"></i>
-        <span>Repetir video</span>
-        </button>
 
-        <button id="btn-seguir-app" class="btn-video btn-seguir" type="button">
-        <span>Seguir amb l'aplicacio</span>
-        <i data-lucide="arrow-right"></i>
-        </button>
-        </div>
+    <div class="video-controls">
+    <button id="btn-repetir-video" class="btn-video btn-repetir" type="button">
+    <i data-lucide="refresh-cw"></i>
+    <span>Repetir video</span>
+    </button>
+
+    <button id="btn-seguir-app" class="btn-video btn-seguir" type="button">
+    <span>Seguir amb l'aplicacio</span>
+    <i data-lucide="arrow-right"></i>
+    </button>
+    </div>
 
     <!--
- 
+
     BOTO SKIP (OPCIONAL)
     Permet saltar el video directament
- 
+
     -->
- 
-<button id="btn-skip-video" class="btn-skip" type="button" title="Saltar video">
- <i data-lucide="skip-forward"></i>
- </button>
-</section>
+
+    <button id="btn-skip-video" class="btn-skip" type="button" title="Saltar video">
+    <i data-lucide="skip-forward"></i>
+    </button>
     
+<!---
+</section>
+--->
+
     <!-- ============================================
          PANTALLA 1: INICI (càrrega de l'app)
          Visible mentre l'app s'inicialitza
