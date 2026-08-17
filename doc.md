@@ -479,6 +479,12 @@ async function generarDietaAmbIA(dadesUsuari, resultats) {
 
 ## 6. DESPLEGAMENT A HOSTINGER
 
+> **Ubicació real al VPS (17/08/2026):** el projecte es desplega a
+> `/var/www/michaelprojects/lstyle-seniors-plus/` (estructura **plana**), amb la API a
+> `Backend/endpoints`. L'estructura `public_html/api/lstyle` següent és de referència
+> per a entorns Hostinger de hosting compartit; en aquest VPS la ruta és la de `Backend/`.
+> Veure `Backend/DESPLIEGUE.md`.
+
 ### 6.1 Estructura fitxers a `/public_html/api/lstyle/`
 
 ```
@@ -616,10 +622,12 @@ consejos_condiciones.sql (FK condicion_id)
 
 | # | Acció | Estat |
 |---|--------|--------|
-| A1 | Pujar frontend: `index.html`, `js/*`, `css/*`, `utils/seguretat.js`, `img/general/` | ⏳ Manual |
+| A1 | Pujar frontend: `index.html`, `js/*`, `css/*`, `utils/seguretat.js`, `img/general/` **+ `VideoIntro/`** | ✅ Desplegat (17/08) |
 | A2 | API viva: sense clau → 401; frontend → 200 (verificat 29/07) | ✅ |
 | A3 | Esborrar `diag.php` / `prova.php` del VPS si encara hi són | ⏳ Manual |
 | A4–A6 | Prova manual producció: formulari → resultats → menú → PDF + casos dieta | ⏳ Després de pujar |
+| A7 | **Estructura plana** a `/var/www/michaelprojects/lstyle-seniors-plus/` (no anidada) + URL curta OK | ✅ Corregit (17/08) |
+| A8 | Ruta API real `Backend/endpoints` (no `api/endpoints`) | ✅ Verificat 401 |
 
 ### Resum de fases
 
