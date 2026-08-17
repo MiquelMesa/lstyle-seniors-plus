@@ -13,7 +13,7 @@
 const videoBienvenida = (() => {
 
     const DURADA_ESCENA = 4000; // 4 segons per escena
-    const NUM_ESCENES = 5;
+    const NUM_ESCENES = 6;
 
     let escenaActual = 0;
     let timeoutCanvi = null;
