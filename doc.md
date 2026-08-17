@@ -1,8 +1,8 @@
 # LSTYLE-SENIORS-PLUS — Documentació Tècnica i Pla d'Implementació
 
-**Versió:** 2.7  
-**Data:** 29 juliol 2026  
-**Estat actual:** Fases 0–3b ✅ · Català IEC · Plats mediterranis realistes · PDF KPIs amb significat · IA externa ajornada
+**Versió:** 2.8  
+**Data:** 17 agost 2026  
+**Estat actual:** Fases 0–3b ✅ · Català IEC · Plats mediterranis realistes · PDF KPIs amb significat · IA externa ajornada · Intro amb diapositives `VideoIntro/` (6 escenes) ✅
 
 ---
 
@@ -600,6 +600,18 @@ consejos_condiciones.sql (FK condicion_id)
 | 16 | Telèfons d'emergència també al PDF (pàgina infografia) | `resultats.js` |
 | 17 | Català IEC (BD) + plats mediterranis realistes + PDF KPIs amb significat | `03_alimentos.sql`, `05_correccio_catala.sql`, `motor-dieta.js`, `resultats.js` |
 
+### Fase 3c — Intro amb diapositives `VideoIntro/` (17/08/2026) ✅
+
+| # | Canvi | Fitxers |
+|---|-------|---------|
+| 1 | Substituir el vídeo/imatge introductòria (URLs externes FAL) per diapositives locals de `VideoIntro/` | `index.html` |
+| 2 | Carregar les 5 escenes existents des de `VideoIntro/01–05 slide.png` (rutes relatives, sense dependències externes) | `index.html` |
+| 3 | **Escena 6 (nova):** `VideoIntro/06 slide.png` — «Connecta amb els teus» · «La tecnologia t'apropa als que més estimes» (videotrucada familiar) | `index.html` |
+| 4 | Descripcions adaptades al contingut real de cada imatge (caminar, cuinar, ioga, aprendre, metge, família) | `index.html` |
+| 5 | Indicador de progrés núm. 6 afegit al HTML | `index.html` |
+| 6 | `NUM_ESCENES` actualitzat de 5 a 6 | `js/video-bienvenida.js` |
+| 7 | Nova carpeta `VideoIntro/` (6 PNG + PDF de referència) — **cal pujar-la sencera al desplegament** | `VideoIntro/` |
+
 ### Checklist desplegament VPS (Bloc A)
 
 | # | Acció | Estat |
@@ -619,6 +631,7 @@ consejos_condiciones.sql (FK condicion_id)
 | **2B** | `resultats.js` (IMC, TMB, TDEE, ICC, PDF) | ✅ |
 | **3** | Motor dieta local 14 dies + calendari | ✅ |
 | **3b** | Al·lèrgies, plantilles, PDF infografia, UX | ✅ 27/07 |
+| **3c** | Intro amb diapositives `VideoIntro/` (6 escenes) | ✅ 17/08 |
 | **A+B** | Desplegament/proves + polish (Seguretat, telèfons, sessió, seed) | ✅ codi 29/07 · ⏳ pujar VPS |
 | **Futur** | IA externa (Gemini/Groq), PWA, seguretat D | ⏳ Ajornat |
 
